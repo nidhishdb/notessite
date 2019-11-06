@@ -32,12 +32,23 @@
 <p><a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">30 CSS Selectors to Memorize</a></p>
 <p>centering element: margin: 0px auto;</p>
 <p>max-width: this property sets the maximum width of the element, if the content is larger than the maximum width, it will automatically change the height of the element.</p>
+<h4 id="backgroundimagehttpscss-trickscomperfect-full-page-background-image">backgroundimage:<a href="https://css-tricks.com/perfect-full-page-background-image/">https://css-tricks.com/perfect-full-page-background-image/</a></h4>
+<h4 id="animatecss---animation-library-to-add-quick-animations"><a href="https://daneden.github.io/animate.css/">Animate.CSS - animation library to add quick animations</a></h4>
+<h4 id="css-grids-cheatsheet">CSS Grids: <a href="http://grid.malven.co/">cheatsheet</a></h4>
 <h3 id="flexbox">Flexbox:</h3>
+<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
 <p><a href="https://darekkay.com/dev/flexbox-cheatsheet.html">flexbox cheatsheet</a></p>
 <p><a href="http://flexboxfroggy.com">flexbox game</a></p>
-<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
 <p>Flexbox Notes:</p>
 <h4 id="flex-direction">Flex direction:</h4>
+<p>Defines the direction of the main axis.</p>
+<p>It takes the values:</p>
+<ul>
+<li>row</li>
+<li>row-reverse</li>
+<li>column</li>
+<li>column-reverse</li>
+</ul>
 <p>By default all element are set <code>flex-direction</code> property to row,which makes all elements to be displayed from left to right.</p>
 <ul>
 <li>we can change the <code>flex-direction</code> property to column which aligns items from top to bottom.</li>
@@ -62,16 +73,42 @@
 <li>center</li>
 </ul>
 <h4 id="align-self">align-self:</h4>
-<p>The <code>align-self</code> property specifies the alignment for the selected item inside the flexible container. It takes the same values as above.</p>
+<p>The <code>align-self</code> property aligns the flex item along the cross axis,overiding the <code>align-items</code> value.</p>
+<p>It takes the values:</p>
+<ul>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+<li>baseline</li>
+<li>stretch</li>
+</ul>
 <p>side note: To make the container responsive vertically we set it's <code>height</code> to 100% as well as the html,body 's <code>height</code> to 100% as well.</p>
+<h4 id="align-content">align-content:</h4>
+<p>The <code>align-content</code> property modifies the behavior of the <code>flex-wrap</code> property. It is similar to <code>align-items</code>, but instead of aligning flex items, it aligns flex lines.</p>
+<p>It takes values:</p>
+<ul>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+<li>stretch</li>
+<li>space-between</li>
+<li>space-around</li>
+<li>space-evenly</li>
+</ul>
+<p>Note: There must be multiple lines of items for this property to have any effect!</p>
 <h4 id="flex-wrap">flex-wrap:</h4>
+<p>Specifies whether flex items are forced on a single line or can be wrapped on multiple lines.</p>
 <p>If the container is smaller than the element's width, then by default flexbox will not push the items to the next row. It will rather try to fit the items in the space available in the container by shrinking the item's width.</p>
 <p>We can change this behaviour with the <code>flex-wrap</code> property.
 It takes the values:</p>
 <ul>
 <li>nowrap (default)</li>
 <li>wrap</li>
+<li>wrap-reverse</li>
 </ul>
+<h4 id="flex-flow">flex-flow:</h4>
+<p>Shorthand property for <code>flex-direction</code> and <code>flex-wrap</code></p>
+<p>Usage: flex-direction flex-wrap</p>
 <h4 id="flex-property">flex property:</h4>
 <p>flex property:
 The <code>flex</code> property sets the flexible length on flexible items.</p>
@@ -88,6 +125,7 @@ The <code>flex</code> property sets the flexible length on flexible items.</p>
 <span class="hljs-selector-tag">flex-shrink</span><span class="hljs-selector-pseudo">:1</span>;
 <span class="hljs-selector-tag">flex-basis</span><span class="hljs-selector-pseudo">:0</span>;
 </div></code></pre>
+<p>The second and third parameters (flex-shrink and flex-basis) are optional.</p>
 <p>Another Example:</p>
 <pre><code class="language-CSS"><div><span class="hljs-selector-tag">flex</span>: 2 1 200<span class="hljs-selector-tag">px</span>;
 </div></code></pre>
@@ -100,6 +138,7 @@ The <code>flex</code> property sets the flexible length on flexible items.</p>
 <p>The <code>flex-shrink</code> property determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn't enough space on the row.</p>
 <p>The <code>flex-basis</code> property specifies the initial length of a flexible item.</p>
 <h4 id="order-property">order property:</h4>
+<p>Specifies the order of the flex item</p>
 <p>Flex items are displayed in the same order as they appear in the HTML document by default. The <code>order</code> property can be used to change this ordering.</p>
 <p>default <code>order</code> value is 0. positive values move the element to the right and negative values move the element to the left.</p>
 
