@@ -22,7 +22,9 @@
     </head>
     <body class="vscode-light">
         <h1 id="html-and-css">HTML and CSS</h1>
-<style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}</style>
+<style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
+/* body{background-color:darkgray} */
+</style>
 <img src="https://i.udemycdn.com/course/750x422/792484_cc98_3.jpg" width=300 style="border-radius:4px">
 <blockquote>
 <p>I think it is possible for ordinary people to choose to be extraordinary - <em>Elon Musk</em></p>
@@ -35,6 +37,26 @@
 <h4 id="backgroundimagehttpscss-trickscomperfect-full-page-background-image">backgroundimage:<a href="https://css-tricks.com/perfect-full-page-background-image/">https://css-tricks.com/perfect-full-page-background-image/</a></h4>
 <h4 id="animatecss---animation-library-to-add-quick-animations"><a href="https://daneden.github.io/animate.css/">Animate.CSS - animation library to add quick animations</a></h4>
 <h4 id="css-grids-cheatsheet">CSS Grids: <a href="http://grid.malven.co/">cheatsheet</a></h4>
+<p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a></p>
+<p>creating grids:</p>
+<p><code>grid-template-columns: repeat(auto-fill,minmax(100px,1fr));</code></p>
+<p><code>grid-auto-rows:100px;</code> this is done to implicitly set the rows</p>
+<p><code>grid-auto-flow:dense;</code> to place items wherever space is available and not leave whitespaces. By default the value is <code>row</code></p>
+<p><code>justify-items</code> is used to justify items inside the container.<br>
+<code>align-items</code> is used to align items inside the container.</p>
+<p><code>justify-self</code> is used to justify the individual item inside the container.<br>
+<code>align-self</code> is used to align the individual item inside the container.</p>
+<h4 id="justify-content-and-align-content">justify-content and align-content</h4>
+<p><code>justify-content</code> property is used to align the whole grid inside the container.<br>
+<code>align-content</code> property is used to vertically align the whole grid inside the container. Both above properties take values:</p>
+<ul>
+<li>center</li>
+<li>space-around</li>
+<li>space-evenly</li>
+<li>space-between</li>
+<li>start</li>
+<li>end</li>
+</ul>
 <h3 id="flexbox">Flexbox:</h3>
 <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
 <p><a href="https://darekkay.com/dev/flexbox-cheatsheet.html">flexbox cheatsheet</a></p>

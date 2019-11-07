@@ -1,6 +1,8 @@
 # HTML and CSS
 
-<style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}</style>
+<style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
+/* body{background-color:darkgray} */
+</style>
 
 <img src="https://i.udemycdn.com/course/750x422/792484_cc98_3.jpg" width=300 style="border-radius:4px">
 
@@ -12,6 +14,41 @@
 centering element: margin: 0px auto;
 
 max-width: this property sets the maximum width of the element, if the content is larger than the maximum width, it will automatically change the height of the element.
+
+#### backgroundimage:https://css-tricks.com/perfect-full-page-background-image/
+
+#### [Animate.CSS - animation library to add quick animations](https://daneden.github.io/animate.css/)
+
+#### CSS Grids: [cheatsheet](http://grid.malven.co/)
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+creating grids:
+
+`grid-template-columns: repeat(auto-fill,minmax(100px,1fr));`
+
+`grid-auto-rows:100px;` this is done to implicitly set the rows
+
+`grid-auto-flow:dense;` to place items wherever space is available and not leave whitespaces. By default the value is `row`
+
+`justify-items` is used to justify items inside the container.   
+`align-items` is used to align items inside the container.
+
+`justify-self` is used to justify the individual item inside the container.  
+` align-self` is used to align the individual item inside the container.
+
+#### justify-content and align-content
+
+`justify-content` property is used to align the whole grid inside the container.  
+`align-content` property is used to vertically align the whole grid inside the container. Both above properties take values:
+* center
+* space-around
+* space-evenly
+* space-between
+* start
+* end
+
+
+
 
         
 ### Flexbox:
