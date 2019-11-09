@@ -179,3 +179,6 @@ Specifies the order of the flex item
 Flex items are displayed in the same order as they appear in the HTML document by default. The `order` property can be used to change this ordering.
 
 default `order` value is 0. positive values move the element to the right and negative values move the element to the left.
+
+#### media queries
+https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
