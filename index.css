@@ -1,4 +1,4 @@
-body {
+body,html {
   background: url(bg.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -11,8 +11,9 @@ a {
   text-align: center;
   color: rgb(4, 33, 49);
   padding: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva,, Tahoma, sans-serif;
   font-size: 1.3rem;
+  /* font-family: monospace; */
 }
 h1 {
   margin-top: 30vh;
