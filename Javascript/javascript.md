@@ -44,4 +44,23 @@ innerHTML //DANGEROUS
 parentElement<br>
 children
 
-##It is important to CACHE selectors in variables
+It is important to CACHE selectors in variables
+#### Events:
+https://developer.mozilla.org/en-US/docs/Web/Events
+
+#### Add an Event:
+
+`element.addEventListener("eventhere",functionhere)`
+
+#### create element:
+`document.createElement('element');`
+
+#### create TextNode:
+`document.createTextNode("Hello World");`
+
+#### appendChild()
+The `.appendChild()` method appends a node as the last child of a node.
+
+Tip: If you want to create a new paragraph, with text, remember to create the text as a Text node which you append to the paragraph, then append the paragraph to the document.
+
+
