@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Javascript</title>
-        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-        
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
         <style>
 .task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
 </style>
@@ -18,7 +18,7 @@
             }
         </style>
         
-        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
     </head>
     <body class="vscode-light">
         <h2 id="javascript">Javascript</h2>
@@ -30,7 +30,23 @@
 <style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
 /* body{background-color:darkgray} */
 </style>
-<h3 id="array">Array</h3>
+<h3 id="arrays">Arrays</h3>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Arrays</span>
+<span class="hljs-comment">//create:</span>
+<span class="hljs-keyword">const</span> games = [<span class="hljs-string">'batman'</span>,<span class="hljs-number">2012</span>,<span class="hljs-string">'assassins creed'</span>];
+<span class="hljs-built_in">console</span>.log(games[<span class="hljs-number">1</span>]);
+<span class="hljs-comment">//modify:</span>
+games[<span class="hljs-number">0</span>] = <span class="hljs-string">'dark knight'</span>;
+<span class="hljs-comment">//Arrays declared with an const cannot be reassigned but can be modified</span>
+
+<span class="hljs-comment">//common array methods:</span>
+<span class="hljs-comment">//.push() allows us to add items to the end of an array</span>
+<span class="hljs-comment">//.pop(), removes the last item of an array.</span>
+<span class="hljs-comment">//shift() method removes the first element from an array and returns that removed element. </span>
+<span class="hljs-comment">//The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.</span>
+<span class="hljs-comment">//The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.</span>
+<span class="hljs-comment">//The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.</span>
+</div></code></pre>
 <h4 id="array-methods">Array Methods:</h4>
 <p><a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">W3C Array Methods</a></p>
 <p>The <code>.forEach()</code> method calls a function once for each element in an array, in order.</p>
@@ -67,6 +83,428 @@ children</p>
 <h4 id="appendchild">appendChild()</h4>
 <p>The <code>.appendChild()</code> method appends a node as the last child of a node.</p>
 <p>Tip: If you want to create a new paragraph, with text, remember to create the text as a Text node which you append to the paragraph, then append the paragraph to the document.</p>
+<h4 id="callback-functions">Callback functions:</h4>
+<p>A callback function is a function that is passed as an argument to another function, to be “called back” at a later time. A function that accepts other functions as arguments is called a higher-order function, which contains the logic for when the callback function gets executed. It’s the combination of these two that allow us to extend our functionality.</p>
+<p>To illustrate callbacks, let’s start with a simple example:</p>
+<pre><code class="language-javascript"><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createQuote</span>(<span class="hljs-params">quote, callback</span>)</span>{ 
+  <span class="hljs-keyword">var</span> myQuote = <span class="hljs-string">"Like I always say, "</span> + quote;
+  callback(myQuote); <span class="hljs-comment">// 2</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">logQuote</span>(<span class="hljs-params">quote</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(quote);
+}
+
+createQuote(<span class="hljs-string">"eat your vegetables!"</span>, logQuote); <span class="hljs-comment">// 1</span>
+
+<span class="hljs-comment">// Result in console: </span>
+<span class="hljs-comment">// Like I always say, eat your vegetables!</span>
+</div></code></pre>
+<p>Notice that we are not appending parentheses to logQuote when we pass it in as an argument. This is because we do not want to execute our callback function right away, we simply want to pass the function definition along to the higher-order function so that it can be executed later.</p>
+<p>Additionally, we can pass in anonymous functions as callbacks. The below call to createQuote would have the same result as the above example:</p>
+<pre><code class="language-javascript"><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createQuote</span>(<span class="hljs-params">quote, functionToCall</span>) </span>{ 
+  <span class="hljs-keyword">var</span> myQuote = <span class="hljs-string">"Like I always say, "</span> + quote;
+  functionToCall(myQuote);
+}
+
+createQuote(<span class="hljs-string">"eat your vegetables!"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">quote</span>)</span>{ 
+  <span class="hljs-built_in">console</span>.log(quote); 
+});
+</div></code></pre>
+<h4 id="3-ways-of-declaring-functions">3 ways of declaring functions</h4>
+<h4 id="ist-way">Ist way:</h4>
+<pre><code class="language-javascript"><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greet</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hi"</span>); <span class="hljs-comment">//function declaration</span>
+}
+</div></code></pre>
+<h4 id="iind-way">IInd way:</h4>
+<pre><code class="language-javascript"><div><span class="hljs-keyword">const</span> hi = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hi"</span>); <span class="hljs-comment">//function expression</span>
+};
+</div></code></pre>
+<h4 id="iiird-way">IIIrd way:</h4>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Arrow functions with no arguements</span>
+<span class="hljs-keyword">const</span> greet1 = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hi"</span>)};
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//with 1 arguement</span>
+<span class="hljs-keyword">const</span> hi2 = <span class="hljs-string">"Hi"</span>;
+<span class="hljs-keyword">const</span> greet2 = <span class="hljs-function"><span class="hljs-params">hi</span> =&gt;</span> {<span class="hljs-built_in">console</span>.log(hi)};
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//with 2 or more arguements </span>
+<span class="hljs-keyword">const</span> hello = <span class="hljs-string">"Hello"</span>;
+<span class="hljs-keyword">const</span> greet3 = <span class="hljs-function">(<span class="hljs-params">hi,hello</span>) =&gt;</span> {<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${hi}</span> <span class="hljs-subst">${hello}</span>`</span>)};
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//single line arrow function </span>
+<span class="hljs-keyword">const</span> greet4 = <span class="hljs-function"><span class="hljs-params">hi</span> =&gt;</span> hi; <span class="hljs-comment">// returns hi</span>
+</div></code></pre>
+<h4 id="objects">Objects</h4>
+<pre><code class="language-javascript"><div><span class="hljs-keyword">const</span> spaceship = {
+    <span class="hljs-string">'Fuel Type'</span>: <span class="hljs-string">'Turbo Fuel'</span>,
+    <span class="hljs-string">'Active Duty'</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">homePlanet</span>: <span class="hljs-string">'Earth'</span>,
+    <span class="hljs-attr">numCrew</span>:<span class="hljs-number">5</span>
+};
+<span class="hljs-comment">//can be accessed with . or []</span>
+<span class="hljs-comment">//with . eg:</span>
+<span class="hljs-built_in">console</span>.log(spaceship.homePlanet);
+<span class="hljs-comment">//with [] eg:</span>
+<span class="hljs-built_in">console</span>.log(spaceship[<span class="hljs-string">'Fuel Type'</span>]);
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//we can write a function to get value of object like so</span>
+<span class="hljs-keyword">let</span> returnAnyProp = <span class="hljs-function">(<span class="hljs-params">objectName, propName</span>) =&gt;</span> objectName[propName];
+
+<span class="hljs-built_in">console</span>.log(returnAnyProp(spaceship, <span class="hljs-string">'homePlanet'</span>)); <span class="hljs-comment">// Returns 'Earth' which is outputted by console.log</span>
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">/*we can add,modify or delete properties to objects with . or []  Eg:*/</span>
+spaceship.type = <span class="hljs-string">'alien'</span>;
+<span class="hljs-comment">/*but if the object is declared with a const then we can't reassign them but we
+can still mutate them*/</span>
+<span class="hljs-comment">//Eg:</span>
+spaceship = {<span class="hljs-attr">captain</span>: <span class="hljs-string">'hashelse'</span>} <span class="hljs-comment">// shows error as no reassign allowed on const but we can still do this...</span>
+spaceship.captain = <span class="hljs-string">'hashelse'</span>;
+<span class="hljs-comment">//we can delete with delete operator Eg:</span>
+<span class="hljs-keyword">delete</span> spaceship.captain;
+
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Methods are nothing but functions in objects. Eg:</span>
+<span class="hljs-keyword">const</span> alienShip = {
+    <span class="hljs-attr">invade</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Charging Lasers..."</span>)
+    }
+};
+<span class="hljs-comment">//with ES6 we can write the same as below:</span>
+<span class="hljs-keyword">const</span> alienShipES6 = {
+    invade () {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Charging Lasers..."</span>)
+    }
+};
+<span class="hljs-comment">//calling methods Eg:</span>
+alienShipES6.invade();
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Nested Objects</span>
+<span class="hljs-keyword">const</span> superSpaceship = {
+     <span class="hljs-attr">telescope</span>: {
+        <span class="hljs-attr">yearBuilt</span>: <span class="hljs-number">2018</span>,
+        <span class="hljs-attr">model</span>: <span class="hljs-string">'91031-XLT'</span>,
+        <span class="hljs-attr">focalLength</span>: <span class="hljs-number">2032</span>
+     },
+    <span class="hljs-attr">crew</span>: {
+        <span class="hljs-attr">captain</span>: {
+            <span class="hljs-attr">name</span>: <span class="hljs-string">'Sandra'</span>,
+            <span class="hljs-attr">degree</span>: <span class="hljs-string">'Computer Engineering'</span>,
+            encourageTeam() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'We got this!'</span>) }
+         }
+    },
+    <span class="hljs-attr">engine</span>: {
+        <span class="hljs-attr">model</span>: <span class="hljs-string">'Nimbus2000'</span>
+     },
+     <span class="hljs-attr">nanoelectronics</span>: {
+         <span class="hljs-attr">computer</span>: {
+            <span class="hljs-attr">terabytes</span>: <span class="hljs-number">100</span>,
+            <span class="hljs-attr">monitors</span>: <span class="hljs-string">'HD'</span>
+         },
+        <span class="hljs-string">'back-up'</span>: {
+           <span class="hljs-attr">battery</span>: <span class="hljs-string">'Lithium'</span>,
+           <span class="hljs-attr">terabytes</span>: <span class="hljs-number">50</span>
+         }
+    }
+};
+<span class="hljs-comment">// Accessing them</span>
+superSpaceship.nanoelectronics[<span class="hljs-string">'back-up'</span>].battery; <span class="hljs-comment">// Returns 'Lithium'</span>
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//functions can change object properties,they actually mutate the object permanently (even when the object is assigned to a const variable). </span>
+<span class="hljs-keyword">const</span> spaceship2 = {
+  <span class="hljs-attr">homePlanet</span> : <span class="hljs-string">'Earth'</span>,
+  <span class="hljs-attr">color</span> : <span class="hljs-string">'silver'</span>
+};
+
+<span class="hljs-keyword">let</span> paintIt = <span class="hljs-function"><span class="hljs-params">obj</span> =&gt;</span> {
+  obj.color = <span class="hljs-string">'glorious gold'</span>
+};
+
+paintIt(spaceship2);
+
+spaceship2.color <span class="hljs-comment">// Returns 'glorious gold'</span>
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//However, reassignment of the spaceship variable wouldn't work in the same way: </span>
+<span class="hljs-keyword">let</span> spaceship3 = {
+  <span class="hljs-attr">homePlanet</span> : <span class="hljs-string">'Earth'</span>,
+  <span class="hljs-attr">color</span> : <span class="hljs-string">'red'</span>
+};
+<span class="hljs-keyword">let</span> tryReassignment = <span class="hljs-function"><span class="hljs-params">obj</span> =&gt;</span> {
+  obj = {
+    <span class="hljs-attr">identified</span> : <span class="hljs-literal">false</span>, 
+    <span class="hljs-string">'transport type'</span> : <span class="hljs-string">'flying'</span>
+  }
+  <span class="hljs-built_in">console</span>.log(obj) <span class="hljs-comment">// Prints {'identified': false, 'transport type': 'flying'}</span>
+
+};
+tryReassignment(spaceship3) <span class="hljs-comment">// The attempt at reassignment does not work.</span>
+
+spaceship3 <span class="hljs-comment">// Still returns {homePlanet : 'Earth', color : 'red'};</span>
+
+spaceship3 = {
+  <span class="hljs-attr">identified</span> : <span class="hljs-literal">false</span>, 
+  <span class="hljs-string">'transport type'</span>: <span class="hljs-string">'flying'</span>
+}; <span class="hljs-comment">// Regular reassignment still works.</span>
+
+
+<span class="hljs-comment">/*This Happens because
+When we passed spaceship3 into that function, obj became a reference to the memory location of the spaceship3 object, but not to the spaceship3 variable. This is because the obj parameter of the tryReassignment() function is a variable in its own right. The body of tryReassignment() has no knowledge of the spaceship3 variable at all!*/</span>
+</div></code></pre>
+<p>//
+//</p>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Looping through objects with for...in</span>
+<span class="hljs-comment">//Eg:</span>
+<span class="hljs-keyword">let</span> spaceship4 = {
+    <span class="hljs-attr">crew</span>: {
+    <span class="hljs-attr">captain</span>: { 
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Lily'</span>, 
+        <span class="hljs-attr">degree</span>: <span class="hljs-string">'Computer Engineering'</span>, 
+        cheerTeam() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'You got this!'</span>) } 
+        },
+    <span class="hljs-string">'chief officer'</span>: { 
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Dan'</span>, 
+        <span class="hljs-attr">degree</span>: <span class="hljs-string">'Aerospace Engineering'</span>, 
+        agree() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'I agree, captain!'</span>) } 
+        },
+    <span class="hljs-attr">medic</span>: { 
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Clementine'</span>, 
+        <span class="hljs-attr">degree</span>: <span class="hljs-string">'Physics'</span>, 
+        announce() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Jets on!`</span>) } },
+    <span class="hljs-attr">translator</span>: {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Shauna'</span>, 
+        <span class="hljs-attr">degree</span>: <span class="hljs-string">'Conservation Science'</span>, 
+        powerFuel() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The tank is full!'</span>) } 
+        }
+    }
+}; 
+<span class="hljs-comment">// for...in</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> crewMember <span class="hljs-keyword">in</span> spaceship4.crew) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${crewMember}</span>: <span class="hljs-subst">${spaceship4.crew[crewMember].name}</span>`</span>)
+};
+
+<span class="hljs-comment">/* Output:
+
+captain: Lily
+chief officer: Dan
+medic: Clementine
+translator: Shauna
+*/</span>
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//accessing another property within a property of the same object (using the</span>
+<span class="hljs-comment">//this keyword) Eg:</span>
+<span class="hljs-keyword">const</span> goat = {
+  <span class="hljs-attr">dietType</span>: <span class="hljs-string">'herbivore'</span>,
+  makeSound() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'baaa'</span>);
+  },
+  diet() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.dietType);
+  }
+};
+
+goat.diet(); 
+<span class="hljs-comment">// Output: herbivore</span>
+<span class="hljs-comment">//which is same as </span>
+<span class="hljs-keyword">const</span> goat2 = {
+  <span class="hljs-attr">dietType</span>: <span class="hljs-string">'herbivore'</span>,
+  makeSound() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'baaa'</span>);
+  },
+  diet() {
+    <span class="hljs-built_in">console</span>.log(goat2.dietType); <span class="hljs-comment">// this is replaced with the calling object which is the goat, meaning this keyword is a nothing but a reference to the calling object</span>
+  }
+};
+
+goat2.diet();
+<span class="hljs-comment">// Output: herbivore</span>
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">// AVOID USING ARROW FUNCTIONS IN AN OBJECT WHEN USING THE 'this' KEYWORD IN AN</span>
+<span class="hljs-comment">// METHOD,STUPID JAVASCRIPT!</span>
+
+<span class="hljs-comment">// by convention don't modify properties beginning with an _ (underscore) </span>
+<span class="hljs-comment">// Eg:</span>
+ <span class="hljs-keyword">const</span> bankAccount = {
+  <span class="hljs-attr">_amount</span>: <span class="hljs-number">1000</span>
+}
+bankAccount._amount = <span class="hljs-number">1000000</span>; <span class="hljs-comment">// you 'can' modify but you 'should'nt'. It's a convention</span>
+<span class="hljs-comment">// the proper way to modify the amount property would be to use a 'getter' function.</span>
+<span class="hljs-comment">// Eg of a getter function:</span>
+<span class="hljs-keyword">const</span> person = {
+  <span class="hljs-attr">_firstName</span>: <span class="hljs-string">'John'</span>,
+  <span class="hljs-attr">_lastName</span>: <span class="hljs-string">'Doe'</span>,
+  <span class="hljs-keyword">get</span> fullName() {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>._firstName &amp;&amp; <span class="hljs-keyword">this</span>._lastName){
+      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>._firstName}</span> <span class="hljs-subst">${<span class="hljs-keyword">this</span>._lastName}</span>`</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">'Missing a first name or a last name.'</span>;
+    }
+  }
+}
+
+<span class="hljs-comment">// To call the getter method: </span>
+person.fullName; <span class="hljs-comment">// 'John Doe'</span>
+
+<span class="hljs-comment">//Getters can perform an action on the data when getting a property.</span>
+<span class="hljs-comment">//Getters can return different values using conditionals.</span>
+<span class="hljs-comment">//In a getter, we can access the properties of the calling object using this</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//Another thing to keep in mind when using getter (and setter) methods is that properties cannot share the same name as the getter/setter function. If we do so, then calling the method will result in an infinite call stack error. One workaround is to add an underscore before the property name like we did in the example above.</span>
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Setters can be used to reassign values of existing properties within an object.Eg:</span>
+<span class="hljs-keyword">const</span> person2 = {
+  <span class="hljs-attr">_age</span>: <span class="hljs-number">37</span>,
+  <span class="hljs-keyword">set</span> age(newAge){
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> newAge === <span class="hljs-string">'number'</span>){
+      <span class="hljs-keyword">this</span>._age = newAge;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'You must assign a number to age'</span>);
+    }
+  }
+};
+<span class="hljs-comment">//then to use the setter method:</span>
+person2.age = <span class="hljs-number">40</span>;
+<span class="hljs-built_in">console</span>.log(person2._age); <span class="hljs-comment">// Logs: 40</span>
+person2.age = <span class="hljs-string">'40'</span>; <span class="hljs-comment">// Logs: You must assign a number to age</span>
+
+<span class="hljs-comment">/*Like getter methods, there are similar advantages to using setter methods that include checking input, performing actions on properties, and displaying a clear intention for how the object is supposed to be used. Nonetheless, even with a setter method, it is still possible to directly reassign properties. For example, in the example above, we can still set ._age directly:
+*/</span>
+person2._age = <span class="hljs-string">'forty-five'</span>
+<span class="hljs-built_in">console</span>.log(person2._age); <span class="hljs-comment">// Prints forty-five</span>
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Factory Functions</span>
+<span class="hljs-comment">//A factory function is a function that returns an object and can be reused to make multiple object instances.</span>
+<span class="hljs-keyword">const</span> monsterFactory = <span class="hljs-function">(<span class="hljs-params">name, age, energySource, catchPhrase</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> { 
+    <span class="hljs-attr">name</span>: name,
+    <span class="hljs-attr">age</span>: age, 
+    <span class="hljs-attr">energySource</span>: energySource,
+    scare() {
+      <span class="hljs-built_in">console</span>.log(catchPhrase);
+    } 
+  }
+};
+<span class="hljs-comment">/*To make an object that represents a specific monster like a ghost, we can call monsterFactory with the necessary arguments and assign the return value to a variable:*/</span>
+
+<span class="hljs-keyword">const</span> ghost = monsterFactory(<span class="hljs-string">'Ghouly'</span>, <span class="hljs-number">251</span>, <span class="hljs-string">'ectoplasm'</span>, <span class="hljs-string">'BOO!'</span>);
+ghost.scare(); <span class="hljs-comment">// 'BOO!'</span>
+
+<span class="hljs-comment">//We can do the same with ES6 Destructuring (assigning arguements to variables)</span>
+<span class="hljs-comment">//as follow:</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-keyword">const</span> monsterFactory2 = <span class="hljs-function">(<span class="hljs-params">name, age, energySource, catchPhrase</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> { 
+    name,
+    age, 
+    energySource,
+    scare() {
+      <span class="hljs-built_in">console</span>.log(catchPhrase);
+    } 
+  }
+};
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Assigning object properties to variables ,Eg:</span>
+<span class="hljs-keyword">const</span> vampire = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'Dracula'</span>,
+  <span class="hljs-attr">residence</span>: <span class="hljs-string">'Transylvania'</span>,
+  <span class="hljs-attr">preferences</span>: {
+    <span class="hljs-attr">day</span>: <span class="hljs-string">'stay inside'</span>,
+    <span class="hljs-attr">night</span>: <span class="hljs-string">'satisfy appetite'</span>
+  }
+};
+<span class="hljs-keyword">const</span> residence = vampire.residence;
+<span class="hljs-built_in">console</span>.log(residence); <span class="hljs-comment">// Prints 'Transylvania'</span>
+
+<span class="hljs-comment">//using destructured assignment :</span>
+<span class="hljs-keyword">const</span> { residence } = vampire; 
+<span class="hljs-built_in">console</span>.log(residence); <span class="hljs-comment">// Prints 'Transylvania'</span>
+<span class="hljs-keyword">const</span> { day } = vampire.preferences; 
+<span class="hljs-built_in">console</span>.log(day); <span class="hljs-comment">// Prints 'stay inside'</span>
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Classes</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Giraffe</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name) {
+    <span class="hljs-keyword">this</span>._name = name;
+    <span class="hljs-keyword">this</span>._behavior = <span class="hljs-number">0</span>;
+  }
+
+  <span class="hljs-keyword">get</span> name() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._name;
+  }
+
+  <span class="hljs-keyword">get</span> behavior() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._behavior;
+  }
+
+  incrementBehavior() {
+    <span class="hljs-keyword">this</span>._behavior++;
+  }
+}
+<span class="hljs-comment">//notice although looking similar to Objects you cannot put commas between</span>
+<span class="hljs-comment">//methods</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//create a new instance of the class</span>
+<span class="hljs-keyword">const</span> halley = <span class="hljs-keyword">new</span> Giraffe(<span class="hljs-string">'Halley'</span>);
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Inheritence</span>
+<span class="hljs-comment">//Parent Class</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name) {
+    <span class="hljs-keyword">this</span>._name = name;
+    <span class="hljs-keyword">this</span>._behavior = <span class="hljs-number">0</span>;
+  }
+
+  <span class="hljs-keyword">get</span> name() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._name;
+  }
+
+  <span class="hljs-keyword">get</span> behavior() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._behavior;
+  }   
+
+  incrementBehavior() {
+    <span class="hljs-keyword">this</span>._behavior++;
+  }
+}
+
+<span class="hljs-comment">//child class</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name) {
+    <span class="hljs-keyword">super</span>(name);
+  }
+}
+
+<span class="hljs-comment">//child class with _usesLitter as additional property</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name, usesLitter) {
+    <span class="hljs-keyword">super</span>(name);
+    <span class="hljs-keyword">this</span>._usesLitter = usesLitter;
+  }
+
+  <span class="hljs-keyword">get</span> usesLitter() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._usesLitter;
+  }
+}
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Static Class</span>
+<span class="hljs-comment">//Sometimes you want to call methods directly from the class, but not from an instance of the class.</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal2</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name) {
+    <span class="hljs-keyword">this</span>._name = name;
+    <span class="hljs-keyword">this</span>._behavior = <span class="hljs-number">0</span>;
+  }
+
+  <span class="hljs-keyword">static</span> generateName() {
+    <span class="hljs-keyword">const</span> names = [<span class="hljs-string">'Angel'</span>, <span class="hljs-string">'Spike'</span>, <span class="hljs-string">'Buffy'</span>, <span class="hljs-string">'Willow'</span>, <span class="hljs-string">'Tara'</span>];
+    <span class="hljs-keyword">const</span> randomNumber = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">5</span>);
+    <span class="hljs-keyword">return</span> names[randomNumber];
+  }
+}
+<span class="hljs-built_in">console</span>.log(Animal2.generateName()); <span class="hljs-comment">// returns a name</span>
+</div></code></pre>
 
     </body>
     </html>
