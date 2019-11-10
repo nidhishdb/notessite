@@ -166,6 +166,7 @@ spaceship.captain = <span class="hljs-string">'hashelse'</span>;
 <span class="hljs-keyword">delete</span> spaceship.captain;
 
 </div></code></pre>
+<h4 id="methods">Methods:</h4>
 <pre><code class="language-javascript"><div><span class="hljs-comment">//Methods are nothing but functions in objects. Eg:</span>
 <span class="hljs-keyword">const</span> alienShip = {
     <span class="hljs-attr">invade</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
@@ -252,8 +253,6 @@ spaceship3 = {
 <span class="hljs-comment">/*This Happens because
 When we passed spaceship3 into that function, obj became a reference to the memory location of the spaceship3 object, but not to the spaceship3 variable. This is because the obj parameter of the tryReassignment() function is a variable in its own right. The body of tryReassignment() has no knowledge of the spaceship3 variable at all!*/</span>
 </div></code></pre>
-<p>//
-//</p>
 <pre><code class="language-javascript"><div><span class="hljs-comment">//Looping through objects with for...in</span>
 <span class="hljs-comment">//Eg:</span>
 <span class="hljs-keyword">let</span> spaceship4 = {
@@ -320,6 +319,7 @@ goat.diet();
 goat2.diet();
 <span class="hljs-comment">// Output: herbivore</span>
 </div></code></pre>
+<h4 id="getters">Getters:</h4>
 <pre><code class="language-javascript"><div><span class="hljs-comment">// AVOID USING ARROW FUNCTIONS IN AN OBJECT WHEN USING THE 'this' KEYWORD IN AN</span>
 <span class="hljs-comment">// METHOD,STUPID JAVASCRIPT!</span>
 
@@ -352,6 +352,7 @@ person.fullName; <span class="hljs-comment">// 'John Doe'</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-comment">//Another thing to keep in mind when using getter (and setter) methods is that properties cannot share the same name as the getter/setter function. If we do so, then calling the method will result in an infinite call stack error. One workaround is to add an underscore before the property name like we did in the example above.</span>
 </div></code></pre>
+<h4 id="setters">Setters:</h4>
 <pre><code class="language-javascript"><div><span class="hljs-comment">//Setters can be used to reassign values of existing properties within an object.Eg:</span>
 <span class="hljs-keyword">const</span> person2 = {
   <span class="hljs-attr">_age</span>: <span class="hljs-number">37</span>,
@@ -373,8 +374,8 @@ person2.age = <span class="hljs-string">'40'</span>; <span class="hljs-comment">
 person2._age = <span class="hljs-string">'forty-five'</span>
 <span class="hljs-built_in">console</span>.log(person2._age); <span class="hljs-comment">// Prints forty-five</span>
 </div></code></pre>
-<pre><code class="language-javascript"><div><span class="hljs-comment">//Factory Functions</span>
-<span class="hljs-comment">//A factory function is a function that returns an object and can be reused to make multiple object instances.</span>
+<h4 id="factory-functions">Factory Functions</h4>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//A factory function is a function that returns an object and can be reused to make multiple object instances.</span>
 <span class="hljs-keyword">const</span> monsterFactory = <span class="hljs-function">(<span class="hljs-params">name, age, energySource, catchPhrase</span>) =&gt;</span> {
   <span class="hljs-keyword">return</span> { 
     <span class="hljs-attr">name</span>: name,
@@ -423,8 +424,8 @@ ghost.scare(); <span class="hljs-comment">// 'BOO!'</span>
 <span class="hljs-keyword">const</span> { day } = vampire.preferences; 
 <span class="hljs-built_in">console</span>.log(day); <span class="hljs-comment">// Prints 'stay inside'</span>
 </div></code></pre>
-<pre><code class="language-javascript"><div><span class="hljs-comment">//Classes</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Giraffe</span> </span>{
+<h4 id="classes">Classes</h4>
+<pre><code class="language-javascript"><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Giraffe</span> </span>{
   <span class="hljs-keyword">constructor</span>(name) {
     <span class="hljs-keyword">this</span>._name = name;
     <span class="hljs-keyword">this</span>._behavior = <span class="hljs-number">0</span>;
@@ -448,8 +449,8 @@ ghost.scare(); <span class="hljs-comment">// 'BOO!'</span>
 <span class="hljs-comment">//create a new instance of the class</span>
 <span class="hljs-keyword">const</span> halley = <span class="hljs-keyword">new</span> Giraffe(<span class="hljs-string">'Halley'</span>);
 </div></code></pre>
-<pre><code class="language-javascript"><div><span class="hljs-comment">//Inheritence</span>
-<span class="hljs-comment">//Parent Class</span>
+<h4 id="inheritence">Inheritence</h4>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Parent Class</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
   <span class="hljs-keyword">constructor</span>(name) {
     <span class="hljs-keyword">this</span>._name = name;
@@ -488,8 +489,8 @@ ghost.scare(); <span class="hljs-comment">// 'BOO!'</span>
   }
 }
 </div></code></pre>
-<pre><code class="language-javascript"><div><span class="hljs-comment">//Static Class</span>
-<span class="hljs-comment">//Sometimes you want to call methods directly from the class, but not from an instance of the class.</span>
+<h4 id="static-class">Static Class</h4>
+<pre><code class="language-javascript"><div><span class="hljs-comment">//Sometimes you want to call methods directly from the class, but not from an instance of the class.</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal2</span> </span>{
   <span class="hljs-keyword">constructor</span>(name) {

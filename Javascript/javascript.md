@@ -181,6 +181,7 @@ spaceship.captain = 'hashelse';
 delete spaceship.captain;
 
 ```
+#### Methods:
 ```javascript
 //Methods are nothing but functions in objects. Eg:
 const alienShip = {
@@ -272,8 +273,7 @@ spaceship3 = {
 /*This Happens because
 When we passed spaceship3 into that function, obj became a reference to the memory location of the spaceship3 object, but not to the spaceship3 variable. This is because the obj parameter of the tryReassignment() function is a variable in its own right. The body of tryReassignment() has no knowledge of the spaceship3 variable at all!*/
 ```
-//
-//
+
 ```javascript
 //Looping through objects with for...in
 //Eg:
@@ -342,6 +342,7 @@ const goat2 = {
 goat2.diet();
 // Output: herbivore
 ```
+#### Getters:
 ```javascript
 // AVOID USING ARROW FUNCTIONS IN AN OBJECT WHEN USING THE 'this' KEYWORD IN AN
 // METHOD,STUPID JAVASCRIPT!
@@ -375,7 +376,7 @@ person.fullName; // 'John Doe'
 //
 //Another thing to keep in mind when using getter (and setter) methods is that properties cannot share the same name as the getter/setter function. If we do so, then calling the method will result in an infinite call stack error. One workaround is to add an underscore before the property name like we did in the example above.
 ```
-
+#### Setters:
 ```javascript
 //Setters can be used to reassign values of existing properties within an object.Eg:
 const person2 = {
@@ -398,8 +399,9 @@ person2.age = '40'; // Logs: You must assign a number to age
 person2._age = 'forty-five'
 console.log(person2._age); // Prints forty-five
 ```
+#### Factory Functions
+
 ```javascript
-//Factory Functions
 //A factory function is a function that returns an object and can be reused to make multiple object instances.
 const monsterFactory = (name, age, energySource, catchPhrase) => {
   return { 
@@ -450,10 +452,8 @@ console.log(residence); // Prints 'Transylvania'
 const { day } = vampire.preferences; 
 console.log(day); // Prints 'stay inside'
 ```
-
-
+#### Classes
 ```javascript
-//Classes
 class Giraffe {
   constructor(name) {
     this._name = name;
@@ -478,8 +478,8 @@ class Giraffe {
 //create a new instance of the class
 const halley = new Giraffe('Halley');
 ```
+#### Inheritence
 ```javascript
-//Inheritence
 //Parent Class
 class Animal {
   constructor(name) {
@@ -519,8 +519,8 @@ class Cat extends Animal {
   }
 }
 ```
+#### Static Class
 ```javascript
-//Static Class
 //Sometimes you want to call methods directly from the class, but not from an instance of the class.
 //
 class Animal2 {
