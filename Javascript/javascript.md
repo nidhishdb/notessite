@@ -6,6 +6,19 @@
 <style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
 /* body{background-color:darkgray} */
 </style>
+#### let and const
+`let` and `const` are block scoped whereas `var` is function scoped.
+
+#### Destructuring
+The destructuring syntax makes it possible to unpack values from arrays, or properties from objects, into variables.
+
+```javascript
+const obj = {
+  name:"Halie",
+  age:18
+}
+const { name, age } = obj;
+```
 
 ### Arrays
 
@@ -81,6 +94,54 @@ The `.appendChild()` method appends a node as the last child of a node.
 
 Tip: If you want to create a new paragraph, with text, remember to create the text as a Text node which you append to the paragraph, then append the paragraph to the document.
 
+#### event.target:
+The target event property returns the 'element' that triggered the event.
+
+
+#### Closures: In JavaScript, if you declare a function within another function, then the local variables of the outer function can remain accessible to inner function after returning from it.
+
+* When a function (foo) declares other functions (bar and baz), the family of local variables created in foo is not destroyed when the function exits. The variables merely become invisible to the outside world. foo can therefore cunningly return the functions bar and baz, and they can continue to read, write and communicate with each other through this closed-off family of variables ("the closure") that nobody else can meddle with, not even someone who calls foo again in future.
+
+##### example 1:
+```javascript
+function a(){           //parent function
+    var name = 'nidhish';
+    function b(){// child function referencing parent function's local variable
+      console.log(name);
+    }
+    return b;    // exit a() function after returning the b function
+}
+
+var c = a();                
+c();  //c() still remembers variable 'name'
+```
+
+
+This example shows that the local variables are not copied — they are kept by reference. It is as though the stack-frame stays alive in memory even after the outer function exits!
+```javascript
+function a(){
+    var num = 10;
+    function b(){
+        console.log(num);
+    }
+    num++;
+    return b;
+}
+
+var c = a();
+console.log(c)
+c();
+```
+##### example 2:
+```javascript
+function sayHello2(name) {
+  var text = 'Hello ' + name; // Local variable
+  var say = function() { console.log(text); }
+  return say;
+}
+var say2 = sayHello2('Bob');
+say2(); // logs "Hello Bob"
+```
 
 #### Callback functions:
 A callback function is a function that is passed as an argument to another function, to be “called back” at a later time. A function that accepts other functions as arguments is called a higher-order function, which contains the logic for when the callback function gets executed. It’s the combination of these two that allow us to extend our functionality.
@@ -399,6 +460,16 @@ person2.age = '40'; // Logs: You must assign a number to age
 person2._age = 'forty-five'
 console.log(person2._age); // Prints forty-five
 ```
+#### Dynamic Object Properties:
+```javascript
+const name = "John";
+const obj = {
+  [name]: 'Wick',
+  [1+2]:'Hihi'
+}
+console.log(obj); // { '3': 'Hihi', John: 'Wick' }
+```
+
 #### Factory Functions
 
 ```javascript
