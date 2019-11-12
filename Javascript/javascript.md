@@ -154,6 +154,8 @@ const multiply = (a,b) => a*b; //this function can be curried as:
 
 const curriedMultiply = (a) => (b) => a*b;
 
+curriedMultiply(2)(3) // 6 , here we're passing arguements to both functions at once
+
 const multiplyBy5 = curriedMultiply(5); //now we have a function which multiplies any number by 5
 multiplyBy5(5); // 25
 multiplyBy5(10); // 50

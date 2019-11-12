@@ -142,6 +142,8 @@ say2(); <span class="hljs-comment">// logs "Hello Bob"</span>
 
 <span class="hljs-keyword">const</span> curriedMultiply = <span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> (b) =&gt; a*b;
 
+curriedMultiply(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>) <span class="hljs-comment">// 6 , here we're passing arguements to both functions at once</span>
+
 <span class="hljs-keyword">const</span> multiplyBy5 = curriedMultiply(<span class="hljs-number">5</span>); <span class="hljs-comment">//now we have a function which multiplies any number by 5</span>
 multiplyBy5(<span class="hljs-number">5</span>); <span class="hljs-comment">// 25</span>
 multiplyBy5(<span class="hljs-number">10</span>); <span class="hljs-comment">// 50</span>
