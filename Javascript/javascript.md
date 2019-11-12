@@ -98,7 +98,8 @@ Tip: If you want to create a new paragraph, with text, remember to create the te
 The target event property returns the 'element' that triggered the event.
 
 
-#### Closures: In JavaScript, if you declare a function within another function, then the local variables of the outer function can remain accessible to inner function after returning from it.
+#### Closures: 
+In JavaScript, if you declare a function within another function, then the local variables of the outer function can remain accessible to inner function after returning from it.
 
 * When a function (foo) declares other functions (bar and baz), the family of local variables created in foo is not destroyed when the function exits. The variables merely become invisible to the outside world. foo can therefore cunningly return the functions bar and baz, and they can continue to read, write and communicate with each other through this closed-off family of variables ("the closure") that nobody else can meddle with, not even someone who calls foo again in future.
 
@@ -141,6 +142,22 @@ function sayHello2(name) {
 }
 var say2 = sayHello2('Bob');
 say2(); // logs "Hello Bob"
+```
+
+#### Currying: 
+When a function, instead of taking all arguments at one time, takes the first one and return a new function that takes the second one and returns a new function which takes the third one, and so forth, until all arguments have been fulfilled.
+
+The arguments are kept "alive"(via closure) and all are used in execution when the final function in the currying chain is returned and executed.
+
+```javascript
+const multiply = (a,b) => a*b; //this function can be curried as:
+
+const curriedMultiply = (a) => (b) => a*b;
+
+const multiplyBy5 = curriedMultiply(5); //now we have a function which multiplies any number by 5
+multiplyBy5(5); // 25
+multiplyBy5(10); // 50
+multiplyBy5(11); // 55
 ```
 
 #### Callback functions:
