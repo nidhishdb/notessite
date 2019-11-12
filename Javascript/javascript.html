@@ -30,6 +30,16 @@
 <style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
 /* body{background-color:darkgray} */
 </style>
+<h4 id="let-and-const">let and const</h4>
+<p><code>let</code> and <code>const</code> are block scoped whereas <code>var</code> is function scoped.</p>
+<h4 id="destructuring">Destructuring</h4>
+<p>The destructuring syntax makes it possible to unpack values from arrays, or properties from objects, into variables.</p>
+<pre><code class="language-javascript"><div><span class="hljs-keyword">const</span> obj = {
+  <span class="hljs-attr">name</span>:<span class="hljs-string">"Halie"</span>,
+  <span class="hljs-attr">age</span>:<span class="hljs-number">18</span>
+}
+<span class="hljs-keyword">const</span> { name, age } = obj;
+</div></code></pre>
 <h3 id="arrays">Arrays</h3>
 <pre><code class="language-javascript"><div><span class="hljs-comment">//Arrays</span>
 <span class="hljs-comment">//create:</span>
@@ -83,6 +93,60 @@ children</p>
 <h4 id="appendchild">appendChild()</h4>
 <p>The <code>.appendChild()</code> method appends a node as the last child of a node.</p>
 <p>Tip: If you want to create a new paragraph, with text, remember to create the text as a Text node which you append to the paragraph, then append the paragraph to the document.</p>
+<h4 id="eventtarget">event.target:</h4>
+<p>The target event property returns the 'element' that triggered the event.</p>
+<h4 id="closures">Closures:</h4>
+<p>In JavaScript, if you declare a function within another function, then the local variables of the outer function can remain accessible to inner function after returning from it.</p>
+<ul>
+<li>When a function (foo) declares other functions (bar and baz), the family of local variables created in foo is not destroyed when the function exits. The variables merely become invisible to the outside world. foo can therefore cunningly return the functions bar and baz, and they can continue to read, write and communicate with each other through this closed-off family of variables (&quot;the closure&quot;) that nobody else can meddle with, not even someone who calls foo again in future.</li>
+</ul>
+<h5 id="example-1">example 1:</h5>
+<pre><code class="language-javascript"><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">a</span>(<span class="hljs-params"></span>)</span>{           <span class="hljs-comment">//parent function</span>
+    <span class="hljs-keyword">var</span> name = <span class="hljs-string">'nidhish'</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">b</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-comment">// child function referencing parent function's local variable</span>
+      <span class="hljs-built_in">console</span>.log(name);
+    }
+    <span class="hljs-keyword">return</span> b;    <span class="hljs-comment">// exit a() function after returning the b function</span>
+}
+
+<span class="hljs-keyword">var</span> c = a();                
+c();  <span class="hljs-comment">//c() still remembers variable 'name'</span>
+</div></code></pre>
+<p>This example shows that the local variables are not copied — they are kept by reference. It is as though the stack-frame stays alive in memory even after the outer function exits!</p>
+<pre><code class="language-javascript"><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">a</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">var</span> num = <span class="hljs-number">10</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">b</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">console</span>.log(num);
+    }
+    num++;
+    <span class="hljs-keyword">return</span> b;
+}
+
+<span class="hljs-keyword">var</span> c = a();
+<span class="hljs-built_in">console</span>.log(c)
+c();
+</div></code></pre>
+<h5 id="example-2">example 2:</h5>
+<pre><code class="language-javascript"><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayHello2</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-keyword">var</span> text = <span class="hljs-string">'Hello '</span> + name; <span class="hljs-comment">// Local variable</span>
+  <span class="hljs-keyword">var</span> say = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(text); }
+  <span class="hljs-keyword">return</span> say;
+}
+<span class="hljs-keyword">var</span> say2 = sayHello2(<span class="hljs-string">'Bob'</span>);
+say2(); <span class="hljs-comment">// logs "Hello Bob"</span>
+</div></code></pre>
+<h4 id="currying">Currying:</h4>
+<p>When a function, instead of taking all arguments at one time, takes the first one and return a new function that takes the second one and returns a new function which takes the third one, and so forth, until all arguments have been fulfilled.</p>
+<p>The arguments are kept &quot;alive&quot;(via closure) and all are used in execution when the final function in the currying chain is returned and executed.</p>
+<pre><code class="language-javascript"><div><span class="hljs-keyword">const</span> multiply = <span class="hljs-function">(<span class="hljs-params">a,b</span>) =&gt;</span> a*b; <span class="hljs-comment">//this function can be curried as:</span>
+
+<span class="hljs-keyword">const</span> curriedMultiply = <span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> (b) =&gt; a*b;
+
+<span class="hljs-keyword">const</span> multiplyBy5 = curriedMultiply(<span class="hljs-number">5</span>); <span class="hljs-comment">//now we have a function which multiplies any number by 5</span>
+multiplyBy5(<span class="hljs-number">5</span>); <span class="hljs-comment">// 25</span>
+multiplyBy5(<span class="hljs-number">10</span>); <span class="hljs-comment">// 50</span>
+multiplyBy5(<span class="hljs-number">11</span>); <span class="hljs-comment">// 55</span>
+</div></code></pre>
 <h4 id="callback-functions">Callback functions:</h4>
 <p>A callback function is a function that is passed as an argument to another function, to be “called back” at a later time. A function that accepts other functions as arguments is called a higher-order function, which contains the logic for when the callback function gets executed. It’s the combination of these two that allow us to extend our functionality.</p>
 <p>To illustrate callbacks, let’s start with a simple example:</p>
@@ -373,6 +437,14 @@ person2.age = <span class="hljs-string">'40'</span>; <span class="hljs-comment">
 */</span>
 person2._age = <span class="hljs-string">'forty-five'</span>
 <span class="hljs-built_in">console</span>.log(person2._age); <span class="hljs-comment">// Prints forty-five</span>
+</div></code></pre>
+<h4 id="dynamic-object-properties">Dynamic Object Properties:</h4>
+<pre><code class="language-javascript"><div><span class="hljs-keyword">const</span> name = <span class="hljs-string">"John"</span>;
+<span class="hljs-keyword">const</span> obj = {
+  [name]: <span class="hljs-string">'Wick'</span>,
+  [<span class="hljs-number">1</span>+<span class="hljs-number">2</span>]:<span class="hljs-string">'Hihi'</span>
+}
+<span class="hljs-built_in">console</span>.log(obj); <span class="hljs-comment">// { '3': 'Hihi', John: 'Wick' }</span>
 </div></code></pre>
 <h4 id="factory-functions">Factory Functions</h4>
 <pre><code class="language-javascript"><div><span class="hljs-comment">//A factory function is a function that returns an object and can be reused to make multiple object instances.</span>
