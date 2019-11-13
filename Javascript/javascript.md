@@ -6,6 +6,11 @@
 <style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
 /* body{background-color:darkgray} */
 </style>
+What are the two elements of a pure function?
+1. Deterministic --> always produces the same results given the same inputs
+2. No Side Effects -->  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.
+
+
 #### let and const
 `let` and `const` are block scoped whereas `var` is function scoped.
 
@@ -43,6 +48,25 @@ games[0] = 'dark knight';
 [W3C Array Methods](https://www.w3schools.com/jsref/jsref_obj_array.asp)
 
 The `.forEach()` method calls a function once for each element in an array, in order.
+
+The `.map()` method **creates a new array** with the results of calling a function for every array element.
+
+The `.filter()` method creates an array filled with all array **elements that pass a test/condition** (provided as a function).
+
+The `reduce()` method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+
+```js
+const array = [1,2,10,16];
+const reduceArray = array.reduce((accumulator,num)=>{
+  return accumulator + num;
+},1)
+
+console.log(reduceArray); // 30
+```
+
+Your reducer function's returned value is assigned to the accumulator, whose value is remembered across each iteration throughout the array and ultimately becomes the final, single resulting value.
+
+We can specify the initial value of the accumulator in the function's second parameter.
 
 #### DOM Manipulation
 
@@ -160,6 +184,29 @@ const multiplyBy5 = curriedMultiply(5); //now we have a function which multiplie
 multiplyBy5(5); // 25
 multiplyBy5(10); // 50
 multiplyBy5(11); // 55
+```
+
+#### function compositon/compose:
+Function composition is a mechanism of combining multiple simple functions to build a more complicated one. The result of each function is passed to the next one. 
+```javascript
+const compose = (f,g) => (a) => f(g(a));
+
+const add = (num) => num + 1;
+
+compose(add,add)(5); // 7
+```
+
+```javascript
+const greetMe = (a,b,c) => (d) => a(b(c(d)));
+
+const a = (d) => d + "!";
+
+const b = (d) => d + " ,Good Morning";
+
+const c = (d) => "Hi! " + d;
+console.log(greetMe(a,b,c)("Nidhish")); //Hi! Nidhish ,Good Morning!
+
+
 ```
 
 #### Callback functions:

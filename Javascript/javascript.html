@@ -30,6 +30,11 @@
 <style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
 /* body{background-color:darkgray} */
 </style>
+<p>What are the two elements of a pure function?</p>
+<ol>
+<li>Deterministic --&gt; always produces the same results given the same inputs</li>
+<li>No Side Effects --&gt;  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.</li>
+</ol>
 <h4 id="let-and-const">let and const</h4>
 <p><code>let</code> and <code>const</code> are block scoped whereas <code>var</code> is function scoped.</p>
 <h4 id="destructuring">Destructuring</h4>
@@ -60,6 +65,18 @@ games[<span class="hljs-number">0</span>] = <span class="hljs-string">'dark knig
 <h4 id="array-methods">Array Methods:</h4>
 <p><a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">W3C Array Methods</a></p>
 <p>The <code>.forEach()</code> method calls a function once for each element in an array, in order.</p>
+<p>The <code>.map()</code> method <strong>creates a new array</strong> with the results of calling a function for every array element.</p>
+<p>The <code>.filter()</code> method creates an array filled with all array <strong>elements that pass a test/condition</strong> (provided as a function).</p>
+<p>The <code>reduce()</code> method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.</p>
+<pre><code class="language-js"><div><span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">10</span>,<span class="hljs-number">16</span>];
+<span class="hljs-keyword">const</span> reduceArray = array.reduce(<span class="hljs-function">(<span class="hljs-params">accumulator,num</span>)=&gt;</span>{
+  <span class="hljs-keyword">return</span> accumulator + num;
+},<span class="hljs-number">1</span>)
+
+<span class="hljs-built_in">console</span>.log(reduceArray); <span class="hljs-comment">// 30</span>
+</div></code></pre>
+<p>Your reducer function's returned value is assigned to the accumulator, whose value is remembered across each iteration throughout the array and ultimately becomes the final, single resulting value.</p>
+<p>We can specify the initial value of the accumulator in the function's second parameter.</p>
 <h4 id="dom-manipulation">DOM Manipulation</h4>
 <h4 id="cheatsheet">cheatsheet:</h4>
 <h2 id="dom-selectors">DOM Selectors</h2>
@@ -148,6 +165,25 @@ curriedMultiply(<span class="hljs-number">2</span>)(<span class="hljs-number">3<
 multiplyBy5(<span class="hljs-number">5</span>); <span class="hljs-comment">// 25</span>
 multiplyBy5(<span class="hljs-number">10</span>); <span class="hljs-comment">// 50</span>
 multiplyBy5(<span class="hljs-number">11</span>); <span class="hljs-comment">// 55</span>
+</div></code></pre>
+<h4 id="function-compositoncompose">function compositon/compose:</h4>
+<p>Function composition is a mechanism of combining multiple simple functions to build a more complicated one. The result of each function is passed to the next one.</p>
+<pre><code class="language-javascript"><div><span class="hljs-keyword">const</span> compose = <span class="hljs-function">(<span class="hljs-params">f,g</span>) =&gt;</span> (a) =&gt; f(g(a));
+
+<span class="hljs-keyword">const</span> add = <span class="hljs-function">(<span class="hljs-params">num</span>) =&gt;</span> num + <span class="hljs-number">1</span>;
+
+compose(add,add)(<span class="hljs-number">5</span>); <span class="hljs-comment">// 7</span>
+</div></code></pre>
+<pre><code class="language-javascript"><div><span class="hljs-keyword">const</span> greetMe = <span class="hljs-function">(<span class="hljs-params">a,b,c</span>) =&gt;</span> (d) =&gt; a(b(c(d)));
+
+<span class="hljs-keyword">const</span> a = <span class="hljs-function">(<span class="hljs-params">d</span>) =&gt;</span> d + <span class="hljs-string">"!"</span>;
+
+<span class="hljs-keyword">const</span> b = <span class="hljs-function">(<span class="hljs-params">d</span>) =&gt;</span> d + <span class="hljs-string">" ,Good Morning"</span>;
+
+<span class="hljs-keyword">const</span> c = <span class="hljs-function">(<span class="hljs-params">d</span>) =&gt;</span> <span class="hljs-string">"Hi! "</span> + d;
+<span class="hljs-built_in">console</span>.log(greetMe(a,b,c)(<span class="hljs-string">"Nidhish"</span>)); <span class="hljs-comment">//Hi! Nidhish ,Good Morning!</span>
+
+
 </div></code></pre>
 <h4 id="callback-functions">Callback functions:</h4>
 <p>A callback function is a function that is passed as an argument to another function, to be “called back” at a later time. A function that accepts other functions as arguments is called a higher-order function, which contains the logic for when the callback function gets executed. It’s the combination of these two that allow us to extend our functionality.</p>
