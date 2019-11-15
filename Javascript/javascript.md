@@ -10,6 +10,14 @@ What are the two elements of a pure function?
 1. Deterministic --> always produces the same results given the same inputs
 2. No Side Effects -->  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.
 
+#### ES7:
+`.includes()` method determines whether a string contains the characters of a specified string.
+
+** exponent operator was added. 
+
+#### ES8:
+.padStart() - adds padding to the start of the string to make the total length of the string equal to the value provided in parameter.
+.padEnd() - adds padding to the end of the string to make the total length of the string equal to the value provided in parameter.
 
 #### let and const
 `let` and `const` are block scoped whereas `var` is function scoped.
@@ -77,6 +85,14 @@ a.d = 'hahaha';
 console.log(a); //{ a: 1, b: 2, c: 3, d: 'hahaha' }
 console.log(deepClone); //{ a: 1, b: 2, c: 3, d: { deep: 'try and copy me' } }
 ```
+#### Type Coercion
+
+https://dorey.github.io/JavaScript-Equality-Table/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
+
+good stuff to read when you can't fall asleep,this is proven to cure insomia
+
+https://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3
 
 #### Destructuring
 The destructuring syntax makes it possible to unpack values from arrays, or properties from objects, into variables.
@@ -109,6 +125,8 @@ games[0] = 'dark knight';
 //The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 ```
 #### Array Methods:
+https://sdras.github.io/array-explorer/ -find array methods without digging through the docs
+
 [W3C Array Methods](https://www.w3schools.com/jsref/jsref_obj_array.asp)
 
 The `.forEach()` method calls a function once for each element in an array, in order.
@@ -341,6 +359,7 @@ const greet3 = (hi,hello) => {console.log(`${hi} ${hello}`)};
 const greet4 = hi => hi; // returns hi
 ```
 #### Objects 
+https://sdras.github.io/object-explorer/ - find object methods without digging through the docs
 ```javascript
 const spaceship = {
     'Fuel Type': 'Turbo Fuel',

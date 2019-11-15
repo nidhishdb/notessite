@@ -35,6 +35,12 @@
 <li>Deterministic --&gt; always produces the same results given the same inputs</li>
 <li>No Side Effects --&gt;  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.</li>
 </ol>
+<h4 id="es7">ES7:</h4>
+<p><code>.includes()</code> method determines whether a string contains the characters of a specified string.</p>
+<p>** exponent operator was added.</p>
+<h4 id="es8">ES8:</h4>
+<p>.padStart() - adds padding to the start of the string to make the total length of the string equal to the value provided in parameter.
+.padEnd() - adds padding to the end of the string to make the total length of the string equal to the value provided in parameter.</p>
 <h4 id="let-and-const">let and const</h4>
 <p><code>let</code> and <code>const</code> are block scoped whereas <code>var</code> is function scoped.</p>
 <h4 id="copying-arrays-and-objects">copying arrays and objects</h4>
@@ -93,8 +99,12 @@ c.d = <span class="hljs-string">'d'</span>;
 a.d = <span class="hljs-string">'hahaha'</span>;
 <span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">//{ a: 1, b: 2, c: 3, d: 'hahaha' }</span>
 <span class="hljs-built_in">console</span>.log(deepClone); <span class="hljs-comment">//{ a: 1, b: 2, c: 3, d: { deep: 'try and copy me' } }</span>
-
 </div></code></pre>
+<h4 id="type-coercion">Type Coercion</h4>
+<p><a href="https://dorey.github.io/JavaScript-Equality-Table/">https://dorey.github.io/JavaScript-Equality-Table/</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness</a></p>
+<p>good stuff to read when you can't fall asleep,this is proven to cure insomia</p>
+<p><a href="https://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3">https://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3</a></p>
 <h4 id="destructuring">Destructuring</h4>
 <p>The destructuring syntax makes it possible to unpack values from arrays, or properties from objects, into variables.</p>
 <pre><code class="language-javascript"><div><span class="hljs-keyword">const</span> obj = {
@@ -121,6 +131,7 @@ games[<span class="hljs-number">0</span>] = <span class="hljs-string">'dark knig
 <span class="hljs-comment">//The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.</span>
 </div></code></pre>
 <h4 id="array-methods">Array Methods:</h4>
+<p><a href="https://sdras.github.io/array-explorer/">https://sdras.github.io/array-explorer/</a> -find array methods without digging through the docs</p>
 <p><a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">W3C Array Methods</a></p>
 <p>The <code>.forEach()</code> method calls a function once for each element in an array, in order.</p>
 <p>The <code>.map()</code> method <strong>creates a new array</strong> with the results of calling a function for every array element.</p>
@@ -298,6 +309,7 @@ createQuote(<span class="hljs-string">"eat your vegetables!"</span>, <span class
 <span class="hljs-keyword">const</span> greet4 = <span class="hljs-function"><span class="hljs-params">hi</span> =&gt;</span> hi; <span class="hljs-comment">// returns hi</span>
 </div></code></pre>
 <h4 id="objects">Objects</h4>
+<p><a href="https://sdras.github.io/object-explorer/">https://sdras.github.io/object-explorer/</a> - find object methods without digging through the docs</p>
 <pre><code class="language-javascript"><div><span class="hljs-keyword">const</span> spaceship = {
     <span class="hljs-string">'Fuel Type'</span>: <span class="hljs-string">'Turbo Fuel'</span>,
     <span class="hljs-string">'Active Duty'</span>: <span class="hljs-literal">true</span>,
