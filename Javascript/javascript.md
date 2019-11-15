@@ -14,6 +14,70 @@ What are the two elements of a pure function?
 #### let and const
 `let` and `const` are block scoped whereas `var` is function scoped.
 
+#### copying arrays and objects 
+Array: Pass by **reference** copy:
+```js
+let a = [1,2,3,4];
+let b = a;
+b.push(5);
+console.log(b); //[ 1, 2, 3, 4, 5 ]
+console.log(a); // [ 1, 2, 3, 4, 5 ]
+```
+Array: Pass by **value** copy:
+```js
+let a = [1,2,3,4];
+let b = [].concat(a);
+b.push(5);
+console.log(b); //[ 1, 2, 3, 4, 5 ]
+console.log(a); //[ 1, 2, 3, 4 ]
+```
+
+Objects: Pass by **reference** copy:
+```js
+let a = {
+    a:'a',
+    b:'b',
+    c:'c'
+}
+let b = a;
+b.d = 'd';
+console.log(a); // { a: 'a', b: 'b', c: 'c', d: 'd' }
+console.log(b); // { a: 'a', b: 'b', c: 'c', d: 'd' }
+```
+Objects: Pass by **value** copy:
+```js
+/*Note: This only does a shallow copy,see below for deep clone (copying nested objects)*/
+let a = {
+    a:'a',
+    b:'b',
+    c:'c'
+}
+let b = Object.assign({},a)
+b.d = 'd';
+console.log(a); // { a: 'a', b: 'b', c: 'c' }
+console.log(b); // { a: 'a', b: 'b', c: 'c', d: 'd' }
+
+// or using spread operator, works the same way
+
+let c = {...a}
+c.d = 'd';
+console.log(a); //{ a: 'a', b: 'b', c: 'c' }
+console.log(c); //{ a: 'a', b: 'b', c: 'c', d: 'd' }
+```
+```js
+//Deep clone (copying nested objects by value)
+let a = {
+    a:1,
+    b:2,
+    c:3,
+    d:{deep:'try and copy me'}
+};
+let deepClone = JSON.parse(JSON.stringify(a));
+a.d = 'hahaha';
+console.log(a); //{ a: 1, b: 2, c: 3, d: 'hahaha' }
+console.log(deepClone); //{ a: 1, b: 2, c: 3, d: { deep: 'try and copy me' } }
+```
+
 #### Destructuring
 The destructuring syntax makes it possible to unpack values from arrays, or properties from objects, into variables.
 

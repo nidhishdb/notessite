@@ -37,6 +37,64 @@
 </ol>
 <h4 id="let-and-const">let and const</h4>
 <p><code>let</code> and <code>const</code> are block scoped whereas <code>var</code> is function scoped.</p>
+<h4 id="copying-arrays-and-objects">copying arrays and objects</h4>
+<p>Array: Pass by <strong>reference</strong> copy:</p>
+<pre><code class="language-js"><div><span class="hljs-keyword">let</span> a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>];
+<span class="hljs-keyword">let</span> b = a;
+b.push(<span class="hljs-number">5</span>);
+<span class="hljs-built_in">console</span>.log(b); <span class="hljs-comment">//[ 1, 2, 3, 4, 5 ]</span>
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// [ 1, 2, 3, 4, 5 ]</span>
+</div></code></pre>
+<p>Array: Pass by <strong>value</strong> copy:</p>
+<pre><code class="language-js"><div><span class="hljs-keyword">let</span> a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>];
+<span class="hljs-keyword">let</span> b = [].concat(a);
+b.push(<span class="hljs-number">5</span>);
+<span class="hljs-built_in">console</span>.log(b); <span class="hljs-comment">//[ 1, 2, 3, 4, 5 ]</span>
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">//[ 1, 2, 3, 4 ]</span>
+</div></code></pre>
+<p>Objects: Pass by <strong>reference</strong> copy:</p>
+<pre><code class="language-js"><div><span class="hljs-keyword">let</span> a = {
+    <span class="hljs-attr">a</span>:<span class="hljs-string">'a'</span>,
+    <span class="hljs-attr">b</span>:<span class="hljs-string">'b'</span>,
+    <span class="hljs-attr">c</span>:<span class="hljs-string">'c'</span>
+}
+<span class="hljs-keyword">let</span> b = a;
+b.d = <span class="hljs-string">'d'</span>;
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// { a: 'a', b: 'b', c: 'c', d: 'd' }</span>
+<span class="hljs-built_in">console</span>.log(b); <span class="hljs-comment">// { a: 'a', b: 'b', c: 'c', d: 'd' }</span>
+</div></code></pre>
+<p>Objects: Pass by <strong>value</strong> copy:</p>
+<pre><code class="language-js"><div><span class="hljs-comment">/*Note: This only does a shallow copy,see below for deep clone (copying nested objects)*/</span>
+<span class="hljs-keyword">let</span> a = {
+    <span class="hljs-attr">a</span>:<span class="hljs-string">'a'</span>,
+    <span class="hljs-attr">b</span>:<span class="hljs-string">'b'</span>,
+    <span class="hljs-attr">c</span>:<span class="hljs-string">'c'</span>
+}
+<span class="hljs-keyword">let</span> b = <span class="hljs-built_in">Object</span>.assign({},a)
+b.d = <span class="hljs-string">'d'</span>;
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// { a: 'a', b: 'b', c: 'c' }</span>
+<span class="hljs-built_in">console</span>.log(b); <span class="hljs-comment">// { a: 'a', b: 'b', c: 'c', d: 'd' }</span>
+
+<span class="hljs-comment">// or using spread operator, works the same way</span>
+
+<span class="hljs-keyword">let</span> c = {...a}
+c.d = <span class="hljs-string">'d'</span>;
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">//{ a: 'a', b: 'b', c: 'c' }</span>
+<span class="hljs-built_in">console</span>.log(c); <span class="hljs-comment">//{ a: 'a', b: 'b', c: 'c', d: 'd' }</span>
+</div></code></pre>
+<pre><code class="language-js"><div><span class="hljs-comment">//Deep clone (copying nested objects by value)</span>
+<span class="hljs-keyword">let</span> a = {
+    <span class="hljs-attr">a</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-attr">b</span>:<span class="hljs-number">2</span>,
+    <span class="hljs-attr">c</span>:<span class="hljs-number">3</span>,
+    <span class="hljs-attr">d</span>:{<span class="hljs-attr">deep</span>:<span class="hljs-string">'try and copy me'</span>}
+};
+<span class="hljs-keyword">let</span> deepClone = <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(a));
+a.d = <span class="hljs-string">'hahaha'</span>;
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">//{ a: 1, b: 2, c: 3, d: 'hahaha' }</span>
+<span class="hljs-built_in">console</span>.log(deepClone); <span class="hljs-comment">//{ a: 1, b: 2, c: 3, d: { deep: 'try and copy me' } }</span>
+
+</div></code></pre>
 <h4 id="destructuring">Destructuring</h4>
 <p>The destructuring syntax makes it possible to unpack values from arrays, or properties from objects, into variables.</p>
 <pre><code class="language-javascript"><div><span class="hljs-keyword">const</span> obj = {
