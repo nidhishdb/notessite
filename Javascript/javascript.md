@@ -16,8 +16,8 @@ What are the two elements of a pure function?
 ** exponent operator was added. 
 
 #### ES8:
-.padStart() - adds padding to the start of the string to make the total length of the string equal to the value provided in parameter.
-.padEnd() - adds padding to the end of the string to make the total length of the string equal to the value provided in parameter.
+`.padStart()` - adds padding to the start of the string to make the total length of the string equal to the value provided in parameter.
+`.padEnd()` - adds padding to the end of the string to make the total length of the string equal to the value provided in parameter.
 
 #### let and const
 `let` and `const` are block scoped whereas `var` is function scoped.
@@ -373,6 +373,30 @@ console.log(spaceship.homePlanet);
 //with [] eg:
 console.log(spaceship['Fuel Type']);
 ```
+Iterating over objects:
+```js
+const obj = {
+    username0:123,
+    username1:'piko',
+    username2:321,
+    username3:'hahhaha'
+}
+//Object.keys(obj) – returns an array of keys.
+Object.keys(obj).forEach((key,index)=>{
+    console.log(`${key}:${obj[key]}`)
+})
+
+// ES8 Method:
+
+//Object.values(obj) – returns an array of values.
+Object.values(obj).forEach(value => {console.log(value)}) 
+
+//Object.entries(obj) – returns an array of [key, value] pairs.
+Object.entries(obj).forEach(([key,value])=>{console.log(`${key}:${value}`)})
+
+Object.entries(obj).forEach((entry)=>console.log(`${entry[0]}:${entry[1]}`))
+```
+
 ```javascript
 //we can write a function to get value of object like so
 let returnAnyProp = (objectName, propName) => objectName[propName];
