@@ -39,8 +39,32 @@
 <p><code>.includes()</code> method determines whether a string contains the characters of a specified string.</p>
 <p>** exponent operator was added.</p>
 <h4 id="es8">ES8:</h4>
-<p><code>.padStart()</code> - adds padding to the start of the string to make the total length of the string equal to the value provided in parameter.
-<code>.padEnd()</code> - adds padding to the end of the string to make the total length of the string equal to the value provided in parameter.</p>
+<p><code>.padStart()</code> - adds padding to the start of the string to make the total length of the string equal to the value provided in parameter.</p>
+<p><code>.padEnd()</code> - adds padding to the end of the string to make the total length of the string equal to the value provided in parameter.</p>
+<h4 id="es10">ES10:</h4>
+<p><code>.flat()</code> can convert nested arrays into simple array. It also removes empty slots in an array.</p>
+<p>The depth of the nested array can be specified in it's parameters. By default it is 1.</p>
+<pre><code class="language-js"><div>  <span class="hljs-keyword">let</span> a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,,[<span class="hljs-number">22</span>],<span class="hljs-number">34</span>,[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]];
+  <span class="hljs-built_in">console</span>.log(a.flat()) <span class="hljs-comment">//[ 1, 2, 22, 34, 5, 6 ]</span>
+</div></code></pre>
+<p><code>.flatMap()</code> - <em>combo of flat() and map()</em></p>
+<p>Is equivalent to doing a map followed by a flat with a depth of 1 separately.</p>
+<pre><code class="language-js"><div><span class="hljs-keyword">let</span> names = [<span class="hljs-string">'john'</span>,<span class="hljs-string">'sally'</span>,[<span class="hljs-string">'joe'</span>],[<span class="hljs-string">'mama'</span>]];
+<span class="hljs-keyword">let</span> newNames = names.flatMap(<span class="hljs-function"><span class="hljs-params">name</span>=&gt;</span> name + <span class="hljs-string">'!'</span>)
+<span class="hljs-comment">//[ "john!", "sally!", "joe!", "mama!" ]</span>
+</div></code></pre>
+<p><code>.trimStart()</code> is a string method that is used to remove whitespace characters from the start of a string.</p>
+<p><code>.trimEnd()</code> is a string method that is used to remove whitespace characters from the end of a string.</p>
+<p><strong>converting arrays into objects and objects into arrays:</strong> <code>Object.fromEntries()</code> and <code>Object.entries()</code></p>
+<p>arrays into objects: <code>Object.fromEntries()</code></p>
+<pre><code class="language-js"><div>userProfiles = [[<span class="hljs-string">'Tom'</span>,<span class="hljs-number">19</span>],[<span class="hljs-string">'Benjamin'</span>,<span class="hljs-number">18</span>],[<span class="hljs-string">'Kevin'</span>,<span class="hljs-number">18</span>],[<span class="hljs-string">'Ryan'</span>,<span class="hljs-number">19</span>]];
+<span class="hljs-built_in">Object</span>.fromEntries(userProfiles); 
+<span class="hljs-comment">//this is the opposite of Object.entries() which gives back array from object</span>
+</div></code></pre>
+<p>objects into arrays: <code>Object.entries()</code></p>
+<pre><code class="language-js"><div><span class="hljs-keyword">let</span> obj = {<span class="hljs-attr">a</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">2</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">3</span>}
+<span class="hljs-built_in">Object</span>.entries(obj);
+</div></code></pre>
 <h4 id="let-and-const">let and const</h4>
 <p><code>let</code> and <code>const</code> are block scoped whereas <code>var</code> is function scoped.</p>
 <h4 id="copying-arrays-and-objects">copying arrays and objects</h4>

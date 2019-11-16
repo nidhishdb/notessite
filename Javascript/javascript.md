@@ -17,7 +17,43 @@ What are the two elements of a pure function?
 
 #### ES8:
 `.padStart()` - adds padding to the start of the string to make the total length of the string equal to the value provided in parameter.
+
 `.padEnd()` - adds padding to the end of the string to make the total length of the string equal to the value provided in parameter.
+
+#### ES10:
+`.flat()` can convert nested arrays into simple array. It also removes empty slots in an array.
+
+The depth of the nested array can be specified in it's parameters. By default it is 1.
+```js
+  let a = [1,2,,[22],34,[5,6]];
+  console.log(a.flat()) //[ 1, 2, 22, 34, 5, 6 ]
+```
+
+`.flatMap()` - *combo of flat() and map()*
+
+Is equivalent to doing a map followed by a flat with a depth of 1 separately.
+```js
+let names = ['john','sally',['joe'],['mama']];
+let newNames = names.flatMap(name=> name + '!')
+//[ "john!", "sally!", "joe!", "mama!" ]
+```
+`.trimStart()` is a string method that is used to remove whitespace characters from the start of a string. 
+
+`.trimEnd()` is a string method that is used to remove whitespace characters from the end of a string. 
+
+**converting arrays into objects and objects into arrays:** `Object.fromEntries()` and `Object.entries()`
+
+arrays into objects: `Object.fromEntries()`
+```js
+userProfiles = [['Tom',19],['Benjamin',18],['Kevin',18],['Ryan',19]];
+Object.fromEntries(userProfiles); 
+//this is the opposite of Object.entries() which gives back array from object
+```
+objects into arrays: `Object.entries()`
+```js
+let obj = {a:1,b:2,c:3}
+Object.entries(obj);
+```
 
 #### let and const
 `let` and `const` are block scoped whereas `var` is function scoped.
