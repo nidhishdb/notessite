@@ -10,6 +10,39 @@ What are the two elements of a pure function?
 1. Deterministic --> always produces the same results given the same inputs
 2. No Side Effects -->  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.
 
+#### `for in` loop and `for of` loop:
+We can iterate over Array items using `for of` loop:
+```js
+let fruits = ['apples','bananas','musumbi','pineapple'];
+
+for (fruit of fruits){
+    console.log(fruit);
+}
+/*
+apples
+bananas
+musombi
+pineapple
+*/
+```
+We can iterate over Object properties (keys) using `for in` loop:
+```js
+const obj = {
+    username0:123,
+    username1:'piko',
+    username2:321,
+    username3:'hahhaha'
+}
+for (user in obj){
+    console.log(user);
+}
+/*
+username0
+username1
+username2
+username3
+*/
+```
 #### ES7:
 `.includes()` method determines whether a string contains the characters of a specified string.
 
@@ -160,6 +193,7 @@ games[0] = 'dark knight';
 //The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.
 //The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 ```
+
 #### Array Methods:
 https://sdras.github.io/array-explorer/ -find array methods without digging through the docs
 

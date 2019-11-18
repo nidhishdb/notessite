@@ -35,6 +35,37 @@
 <li>Deterministic --&gt; always produces the same results given the same inputs</li>
 <li>No Side Effects --&gt;  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.</li>
 </ol>
+<h4 id="for-in-loop-and-for-of-loop"><code>for in</code> loop and <code>for of</code> loop:</h4>
+<p>We can iterate over Array items using <code>for of</code> loop:</p>
+<pre><code class="language-js"><div><span class="hljs-keyword">let</span> fruits = [<span class="hljs-string">'apples'</span>,<span class="hljs-string">'bananas'</span>,<span class="hljs-string">'musumbi'</span>,<span class="hljs-string">'pineapple'</span>];
+
+<span class="hljs-keyword">for</span> (fruit <span class="hljs-keyword">of</span> fruits){
+    <span class="hljs-built_in">console</span>.log(fruit);
+}
+<span class="hljs-comment">/*
+apples
+bananas
+musombi
+pineapple
+*/</span>
+</div></code></pre>
+<p>We can iterate over Object properties (keys) using <code>for in</code> loop:</p>
+<pre><code class="language-js"><div><span class="hljs-keyword">const</span> obj = {
+    <span class="hljs-attr">username0</span>:<span class="hljs-number">123</span>,
+    <span class="hljs-attr">username1</span>:<span class="hljs-string">'piko'</span>,
+    <span class="hljs-attr">username2</span>:<span class="hljs-number">321</span>,
+    <span class="hljs-attr">username3</span>:<span class="hljs-string">'hahhaha'</span>
+}
+<span class="hljs-keyword">for</span> (user <span class="hljs-keyword">in</span> obj){
+    <span class="hljs-built_in">console</span>.log(user);
+}
+<span class="hljs-comment">/*
+username0
+username1
+username2
+username3
+*/</span>
+</div></code></pre>
 <h4 id="es7">ES7:</h4>
 <p><code>.includes()</code> method determines whether a string contains the characters of a specified string.</p>
 <p>** exponent operator was added.</p>
