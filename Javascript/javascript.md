@@ -10,6 +10,11 @@ What are the two elements of a pure function?
 1. Deterministic --> always produces the same results given the same inputs
 2. No Side Effects -->  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.
 
+#### `join()` method returns the array as a string.
+The elements will be separated by a specified separator. The default separator is comma (,)
+
+
+
 #### `for in` loop and `for of` loop:
 We can iterate over Array items using `for of` loop:
 ```js
