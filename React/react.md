@@ -18,3 +18,5 @@ Now you can run:
 
 `create-react-app my-app`
 
+#### `<Fragment>`
+Too many `<div>` tags clutering your JSX? NO PROBLEM, write semantic JSX with `<Fragment>` (React 16+) - http://blog.jmes.tech/react-fragment-and-semantic-html/ 
