@@ -20,3 +20,5 @@ Now you can run:
 
 #### `<Fragment>`
 Too many `<div>` tags clutering your JSX? NO PROBLEM, write semantic JSX with `<Fragment>` (React 16+) - http://blog.jmes.tech/react-fragment-and-semantic-html/ 
+
+When creating methods inside a component use a arrow function, as it sets it's `this` to the component it is in.
