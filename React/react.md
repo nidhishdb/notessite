@@ -18,7 +18,23 @@ Now you can run:
 
 `create-react-app my-app`
 
+#### Deployment with CRA
+https://create-react-app.dev/docs/deployment/#github-pages-https-pagesgithubcom
+
 #### `<Fragment>`
 Too many `<div>` tags clutering your JSX? NO PROBLEM, write semantic JSX with `<Fragment>` (React 16+) - http://blog.jmes.tech/react-fragment-and-semantic-html/ 
 
 When creating methods inside a component use a arrow function, as it sets it's `this` to the component it is in.
+
+#### Lifecycle hooks
+https://reactjs.org/docs/react-component.html
+
+#### props.children
+ Components that wrap around other components can be accessed through props.children
+```js
+    <Scroll>
+        <Card />
+    </Scroll>
+```
+Here `<Card />` component is passed down as a Prop to `<Scroll>` Component.
+

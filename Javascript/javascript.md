@@ -10,6 +10,18 @@ What are the two elements of a pure function?
 1. Deterministic --> always produces the same results given the same inputs
 2. No Side Effects -->  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.
 
+#### fetch()
+The Fetch API provides an interface for fetching resources (including across the network)
+```js
+fetch(url,options) // Call the fetch function passing the url of the API as a parameter
+.then(function() {
+    // Your code for handling the data you get from the API
+})
+.catch(function() {
+    // This is where you run code if the server returns any errors
+});
+```
+
 #### `join()` method returns the array as a string.
 The elements will be separated by a specified separator. The default separator is comma (,)
 
