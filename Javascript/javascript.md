@@ -10,6 +10,16 @@ What are the two elements of a pure function?
 1. Deterministic --> always produces the same results given the same inputs
 2. No Side Effects -->  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.
 
+#### JSON:Javascipt Object Notation
+#### JSON.parse: JSON to Object
+```js
+var obj = JSON.parse('{"name":"John","age":30,"city":"New york"}')
+```
+#### JSON.stringify() : Object to JSON
+```js
+var myJSON = JSON.stringify(obj);
+```
+
 #### fetch()
 The Fetch API provides an interface for fetching resources (including across the network)
 ```js
