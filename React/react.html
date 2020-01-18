@@ -48,6 +48,10 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">Scroll</span>&gt;</span></span>
 </div></code></pre>
 <p>Here <code>&lt;Card /&gt;</code> component is passed down as a Prop to <code>&lt;Scroll&gt;</code> Component.</p>
+<h4 id="errorboundaries-react16---componentdidcatch">ErrorBoundaries (React16+) - componentDidCatch():</h4>
+<p><a href="https://reactjs.org/docs/error-boundaries.html">https://reactjs.org/docs/error-boundaries.html</a></p>
+<p>Error boundaries work like a JavaScript catch {} block, but for components. Only class components can be error boundaries. In practice, most of the time you’ll want to declare an error boundary component once and use it throughout your application.</p>
+<p>Note that error boundaries only catch errors in the components below them in the tree. An error boundary can’t catch an error within itself. If an error boundary fails trying to render the error message, the error will propagate to the closest error boundary above it.</p>
 
     </body>
     </html>
