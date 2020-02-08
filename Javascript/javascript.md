@@ -10,6 +10,70 @@ What are the two elements of a pure function?
 1. Deterministic --> always produces the same results given the same inputs
 2. No Side Effects -->  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.
 
+#### Promises
+Promises are the ideal choice for handling asynchronous operations in the simplest manner. They can handle multiple asynchronous operations easily.
+
+Syntax:
+```js
+var promise = new Promise(function(resolve, reject){
+     //do something
+});
+```
+
+Promise constructor takes only one argument,a callback function.
+    
+Callback function takes two arguments, resolve and reject
+    
+Perform operations inside the callback function and if everything went well then call resolve.
+
+If desired operations do not go well then call reject.
+
+A promise will start doing whatever task you give it as soon as the promise constructor is invoked.
+
+```js
+const promise = new Promise((resolve,reject)=>{
+    if(true){
+        resolve('done');
+    }else{
+        reject('error');
+    }
+})
+
+const promise2 = new Promise((resolve,reject)=>{
+    setTimeout(resolve,2000,'yeye')
+})
+
+
+const promise3 = new Promise((resolve,reject)=>{
+    setTimeout(resolve,1000,'kek')
+})
+
+promise.then(res => console.log(res))
+promise2.then(res => console.log(res))
+promise3.then(res => console.log(res))
+
+Promise.all([promise,promise2,promise3]).then(values => {console.log(values)})
+```
+`Promise.all()` is actually a promise that takes an array of promises as an input (an iterable). Then it gets resolved when all the promises get resolved or any one of them gets rejected.
+
+`Promise.resolve()` and `Promise.reject()`
+
+`Promise.resolve()` method in JS returns a Promise object that is resolved with a given value.
+```js
+const promise = Promise.resolve(
+  setTimeout(() => {
+    console.log("success");
+  }, 4000)
+);
+```
+The `Promise.reject()` method returns a Promise object that is rejected with a given reason.
+
+```js 
+Promise.reject('failed')
+  .catch(console.log('Ooops something went wrong'))
+```
+
+
 #### JSON:Javascipt Object Notation
 #### JSON.parse: JSON to Object
 ```js
