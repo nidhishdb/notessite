@@ -30,6 +30,8 @@
 <style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
 /* body{background-color:darkgray} */
 </style>
+<p>List of new JS features
+<a href="https://github.com/daumann/ECMAScript-new-features-list">https://github.com/daumann/ECMAScript-new-features-list</a></p>
 <p>What are the two elements of a pure function?</p>
 <ol>
 <li>Deterministic --&gt; always produces the same results given the same inputs</li>
@@ -70,6 +72,7 @@ promise3.then(<span class="hljs-function"><span class="hljs-params">res</span> =
 
 <span class="hljs-built_in">Promise</span>.all([promise,promise2,promise3]).then(<span class="hljs-function"><span class="hljs-params">values</span> =&gt;</span> {<span class="hljs-built_in">console</span>.log(values)})
 </div></code></pre>
+<p>Using <code>.then()</code> we can do something with resolved promise.</p>
 <p><code>Promise.all()</code> is actually a promise that takes an array of promises as an input (an iterable). Then it gets resolved when all the promises get resolved or any one of them gets rejected.</p>
 <p><code>Promise.resolve()</code> and <code>Promise.reject()</code></p>
 <p><code>Promise.resolve()</code> method in JS returns a Promise object that is resolved with a given value.</p>
@@ -83,6 +86,48 @@ promise3.then(<span class="hljs-function"><span class="hljs-params">res</span> =
 <pre><code class="language-js"><div><span class="hljs-built_in">Promise</span>.reject(<span class="hljs-string">'failed'</span>)
   .catch(<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Ooops something went wrong'</span>))
 </div></code></pre>
+<p><code>Async/Await</code> (Syntactic Sugar for Promises)</p>
+<pre><code class="language-js"><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">resolveAfter2Seconds</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> {
+    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      resolve(<span class="hljs-string">'resolved'</span>);
+    }, <span class="hljs-number">2000</span>);
+  });
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">asyncCall</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'calling'</span>);
+  <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> resolveAfter2Seconds();
+  <span class="hljs-built_in">console</span>.log(result);
+  <span class="hljs-comment">// expected output: 'resolved'</span>
+}
+
+asyncCall();
+</div></code></pre>
+<pre><code class="language-js"><div><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{
+
+  <span class="hljs-keyword">let</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> resolve(<span class="hljs-string">"done!"</span>), <span class="hljs-number">1000</span>)
+  });
+
+  <span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> promise; <span class="hljs-comment">// wait until the promise resolves (*)</span>
+
+  alert(result); <span class="hljs-comment">// "done!"</span>
+}
+
+f();
+</div></code></pre>
+<p>The async keyword before a function has two effects:</p>
+<ul>
+<li>Makes it always return a promise.</li>
+<li>Allows await to be used in it.</li>
+</ul>
+<p>The await keyword before a promise makes JavaScript wait until that promise settles, and then:</p>
+<ul>
+<li>If it’s an error, the exception is generated.</li>
+<li>Otherwise, it returns the result.</li>
+</ul>
+<p>We can use a <code>try...catch</code> block inside async functions to catch errors</p>
 <h4 id="jsonjavascipt-object-notation">JSON:Javascipt Object Notation</h4>
 <h4 id="jsonparse-json-to-object">JSON.parse: JSON to Object</h4>
 <pre><code class="language-js"><div><span class="hljs-keyword">var</span> obj = <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-string">'{"name":"John","age":30,"city":"New york"}'</span>)

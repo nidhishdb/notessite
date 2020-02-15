@@ -6,6 +6,9 @@
 <style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
 /* body{background-color:darkgray} */
 </style>
+List of new JS features
+https://github.com/daumann/ECMAScript-new-features-list
+
 What are the two elements of a pure function?
 1. Deterministic --> always produces the same results given the same inputs
 2. No Side Effects -->  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.
@@ -54,6 +57,8 @@ promise3.then(res => console.log(res))
 
 Promise.all([promise,promise2,promise3]).then(values => {console.log(values)})
 ```
+Using `.then()` we can do something with resolved promise. 
+
 `Promise.all()` is actually a promise that takes an array of promises as an input (an iterable). Then it gets resolved when all the promises get resolved or any one of them gets rejected.
 
 `Promise.resolve()` and `Promise.reject()`
@@ -73,6 +78,52 @@ Promise.reject('failed')
   .catch(console.log('Ooops something went wrong'))
 ```
 
+`Async/Await` (Syntactic Sugar for Promises)
+
+
+```js
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: 'resolved'
+}
+
+asyncCall();
+```
+```js
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  let result = await promise; // wait until the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+f();
+```
+The async keyword before a function has two effects:
+
+   * Makes it always return a promise.
+   * Allows await to be used in it.
+
+The await keyword before a promise makes JavaScript wait until that promise settles, and then:
+
+   * If it’s an error, the exception is generated. 
+   * Otherwise, it returns the result.
+
+We can use a `try...catch` block inside async functions to catch errors
 
 #### JSON:Javascipt Object Notation
 #### JSON.parse: JSON to Object
