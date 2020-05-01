@@ -22,10 +22,10 @@ h1 {
   margin-top: 30vh;
   text-align: center;
   font-family: monospace;
-  color: cyan;
+  color: #da5175;
 }
 h1:hover {
-  color: red;
+  color: #d68c9f;
 }
 .container {
   display: flex;
