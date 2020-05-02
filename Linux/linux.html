@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Linux</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h2 id="linux">Linux</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="javascript logo" width=300 style="border-radius:4px">
+<blockquote>
+<p>“I don't think that you have any insight whatsoever into your capacity for good until you have some well-developed insight into your capacity for evil.” - <em>Jordan B. Peterson</em></p>
+</blockquote>
+<hr>
+<style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
+/* body{background-color:darkgray} */
+</style>
+<p>ls -ltr   --shows last modified in reverse order</p>
+<p>find and locate command:
+find / -name &quot;yeet.txt&quot;
+locate yeet.txt</p>
+<p>locate command uses a cache/db to keep track of files.update the db using the
+command :updatedb</p>
+<p>soft and hard links
+soft links can be created using ln -s command
+hard links can be created using ln command (Hard links only work within the same
+partition)</p>
+<p>Soft links:when the source link is deleted the contents of the destination link is also
+deleted
+Hard links:when the source link is deleted the contents of the destination link
+remains untouched</p>
+<p>Hards links point to the same inode
+Soft links point to different inode</p>
+<p>Types of files in linux:</p>
+<ul>
+<li>Regular file
+d Directory
+l link
+c special file or device file
+p named pipe
+s socket
+b block device</li>
+</ul>
+<p>Linux Wildcards:
+*
+?
+[] -  matches any occurrence of character
+{} - suited for numbers (? incomplete)</p>
+<p>chown: to change the owner of the file or directory
+chgrp: to change the group of the file or directory</p>
+<p>chown parserite:parserite changes the owner and group of the file or directory</p>
+<p>whatis: shows a small description of a command
+command --help:shows a smaller help page
+man command:shows the manual for a command</p>
+<p>tee: is used to store and view (both at the same time) the output of any command</p>
+<p>The command is named after the T-splitter used in plumbing. It basically breaks
+the output of a program so that it can be both displayed and saved in a <a href="http://file.It">file.It</a>
+does both the tasks simultaneosly,copies the result into the specified files or
+variables and also display the result.</p>
+<p>pipes: A pipe is used by the shell to connect the output of one command directlt
+to the input of another command.
+syntax: command1 [arguements] | command2 [arguements]</p>
+<p>ll: long list</p>
+
+    </body>
+    </html>
