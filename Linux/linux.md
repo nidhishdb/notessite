@@ -57,7 +57,7 @@ man command:shows the manual for a command
 tee: is used to store and view (both at the same time) the output of any command
 
 The command is named after the T-splitter used in plumbing. It basically breaks
-the output of a program so that it can be both displayed and saved in a file.It
+the output of a program so that it can be both displayed and saved in a file. It
 does both the tasks simultaneosly,copies the result into the specified files or
 variables and also display the result.
 

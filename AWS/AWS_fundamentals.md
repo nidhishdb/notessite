@@ -37,8 +37,17 @@ Amazon EC2 presents a true virtual computing environment, and it allows you to u
 #### Amazon EC2 instance types:
 Amazon EC2 provides a wide selection of instance types that are optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity. They give you the flexibility to choose the appropriate mix of resources for your applications. Each instance type includes one or more instance sizes, which allows you to scale your resources to the requirements of your target workload. Current details about available instance types are available at: https://aws.amazon.com/ec2/instance-types/ 
 
+- General Purpose:These instances provide a balance of compute,memory and networking resources,and can be used for a variety of diverse workloads.These instances are ideal for applications which use these resources in equal proportions such as web servers and code repositories.
 
-Container services:Docker:ECS,Kubernetes:EKS,serverless:aws lambda
+- Compute Optimised:Compute optimised instances are ideal for compute bound applications which benefit from high performance processors.Instances belonging to this family are well suited for batch processing, dedicated gaming servers,ad server engines, machine learning inference, scientific modeling, high performance computing and other compute intensive applications.
+
+- Memory Optimised: These instances deliver fast performance for workloads that process large data sets in memory.
+
+- Accelarated Computing:Accelarated Computing Instances makes use of hardware accelarators or co-processors, to perform functions such as floating point number calculations,graphic processing or data pattern matching,more efficiently than is possible from software running on CPUs.
+
+- Storage Optimised:Storage optimised instances are designed for workloads which require high,sequential read and write access to large sets of data in local storage.They are optimised to deliver tens of thousands of low latency,random I/O operations per second to applications.
+
+#### Container services:Docker:ECS,Kubernetes:EKS,serverless:aws lambda
 
 Complete list can be found at:
 https://aws.amazon.com/products/compute/
