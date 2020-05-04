@@ -66,3 +66,37 @@ to the input of another command.
 syntax: command1 [arguements] | command2 [arguements]
 
 ll: long list
+
+cut -c1 filename     - to get the first line of characters
+cut -c1-4 filename - to get character lines from 1-4 range
+
+awk:separates each column in a file
+awk '{print $1}'    - gives the first column in a file
+
+grep:searches for patterns in each file.
+
+sort- sort filename         -sorts alphabetically
+sort -r filename            -sort reverse alphabetically
+
+uniq- removes repeated lines in a file (have to `sort` it before piping it to uniq)
+
+wc - count the number of lines,words,bytes of file
+
+tar cvf out.tar files/directory   -create tarball
+tar xvf file.tar                  -extract tarball
+
+gzip file   -compress file
+gzip -d or gunzip compressed-filename  -decompress file
+
+xz filename -compress
+xz -d filename -decompress
+
+truncate - shrink or extend the size of a file to the specified size (it causes data to be deleted in order to shrink the size of the file and adds junk values to extend the file size)
+truncate -s filesize_in_bytes filename
+
+combining files:
+cat file1 file2 file3 > file4
+
+spliting files:
+split -l 2 file4 new
+This above command splits file4 into 2 lines per file and output newaa,newab,newac

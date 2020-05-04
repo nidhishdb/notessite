@@ -52,3 +52,5 @@ Amazon EC2 provides a wide selection of instance types that are optimized to fit
 Complete list can be found at:
 https://aws.amazon.com/products/compute/
 
+### Lightsail:
+Amazon Lightsail is the easiest way to get started with AWS for developers, small businesses, students, and other users who need a simple virtual private server (VPS) solution. Lightsail provides developers compute, storage, and networking capacity, and it also provides capabilities to deploy and manage websites and web applications in the cloud. Lightsail includes everything you need to launch your project quickly--a virtual machine, solid state drive (SSD)-based storage, data transfer, Domain Name System (DNS) management, and a static IP--for a low, predictable monthly price.

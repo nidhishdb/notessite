@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Linux</title>
-        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-        
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
         <style>
 .task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
 </style>
@@ -18,7 +18,7 @@
             }
         </style>
         
-        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
     </head>
     <body class="vscode-light">
         <h2 id="linux">Linux</h2>
@@ -76,6 +76,28 @@ variables and also display the result.</p>
 to the input of another command.
 syntax: command1 [arguements] | command2 [arguements]</p>
 <p>ll: long list</p>
+<p>cut -c1 filename     - to get the first line of characters
+cut -c1-4 filename - to get character lines from 1-4 range</p>
+<p>awk:separates each column in a file
+awk '{print $1}'    - gives the first column in a file</p>
+<p>grep:searches for patterns in each file.</p>
+<p>sort- sort filename         -sorts alphabetically
+sort -r filename            -sort reverse alphabetically</p>
+<p>uniq- removes repeated lines in a file (have to <code>sort</code> it before piping it to uniq)</p>
+<p>wc - count the number of lines,words,bytes of file</p>
+<p>tar cvf out.tar files/directory   -create tarball
+tar xvf file.tar                  -extract tarball</p>
+<p>gzip file   -compress file
+gzip -d or gunzip compressed-filename  -decompress file</p>
+<p>xz filename -compress
+xz -d filename -decompress</p>
+<p>truncate - shrink or extend the size of a file to the specified size (it causes data to be deleted in order to shrink the size of the file and adds junk values to extend the file size)
+truncate -s filesize_in_bytes filename</p>
+<p>combining files:
+cat file1 file2 file3 &gt; file4</p>
+<p>spliting files:
+split -l 2 file4 new
+This above command splits file4 into 2 lines per file and output newaa,newab,newac</p>
 
     </body>
     </html>
