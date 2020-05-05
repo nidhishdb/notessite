@@ -79,3 +79,35 @@ In each Region, AWS will provision a default VPC. This VPC has a /16 IPv4 CIDR a
 You can modify or delete the default VPC if you want to do so.
 
 The most current details on the default VPC can be found here: https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html
+
+### Storage
+RDS :Object
+
+EBS:
+
+Block Storage (EBS) is stored independent of EC2.When a new instance of EC2 is created the old EBS volumes can be attached to it.
+
+"The Elastic Volume feature of Amazon EBS allows you to dynamically increase capacity, tune performance, and change the type of live volumes with no downtime or performance impact. This allows you to easily right-size your deployment and adapt to performance changes."
+
+(EBS attaches to only one EC2)
+
+#### Amazon Simple Storage Service (Amazon S3):
+
+Amazon Simple Storage Service (Amazon S3) stores data as objects within resources that are called buckets. You can store as many objects as you want within a bucket, and you can write, read, and delete objects in your bucket. Objects can be up to 5 TB in size.
+
+You can control access to both the bucket and the objects (who can create, delete, and retrieve objects in the bucket for example), and view access logs for the bucket and its objects. You can also choose the AWS Region where a bucket is stored to optimize for latency, minimize costs, or address regulatory requirements.
+
+Full details on Amazon S3 can be found here: https://aws.amazon.com/s3.
+
+Estimate your monthly bill by using the [AWS Simple Monthly Calculator](https://calculator.s3.amazonaws.com/index.html)
+
+
+#### EFS FileSystem
+
+Amazon Elastic File System (Amazon EFS) provides simple, scalable, elastic file storage for use with AWS Cloud services and on-premises resources. It is straightforward to use, and it offers a simple interface that allows you to create and configure file systems quickly and easily.
+
+Amazon EFS is designed to provide massively parallel shared access to thousands of Amazon EC2 instances. This enables your applications to achieve high levels of aggregate throughput and IOPS that scale as a file system grows, with consistent low latencies.
+
+When an Amazon EFS file system is mounted on Amazon EC2 instances, it provides a standard file system interface and file system access semantics, which allows you to seamlessly integrate Amazon EFS with your existing applications and tools. Multiple Amazon EC2 instances can access an Amazon EFS file system at the same time, thus allowing Amazon EFS to provide a common data source for workloads and applications that run on more than one Amazon EC2 instance.
+
+Current details on Amazon EFS can be found at: https://aws.amazon.com/efs/
