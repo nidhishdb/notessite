@@ -98,6 +98,18 @@ cat file1 file2 file3 &gt; file4</p>
 <p>spliting files:
 split -l 2 file4 new
 This above command splits file4 into 2 lines per file and output newaa,newab,newac</p>
+<p>sed:
+<code>sed -i 's/oldstring/newstring/'</code>  - replace all occurances of oldstring with newstring (-i  option is to write changes to the disk)</p>
+<p><code>sed '3!s/oldstring/newstring/' filename</code>  -replace oldstring with newstring except the 3rd line</p>
+<p><code>sed '/string-to-delete/d' filename</code> - find and delete lines matching the string</p>
+<p><code>sed '/^$/d' filename</code> -remove empty lines from a file</p>
+<p><code>sed '1d' filename</code> - remove first line from the file (1 is the line number, replace it with the line you want to delete)</p>
+<p><code>sed '1,4d' filename</code> -remove first 4 lines</p>
+<p><code>sed 's/\t/ /' filename</code> - replace tabs with spaces</p>
+<p><code>sed 's/ /\t/' filename</code> - replace spaces with tabs</p>
+<p><code>sed -n 5,9p filename</code> - shows lines from 5 to 9</p>
+<p><code>sed 5,9d filename</code> - show lines except 5 to 9</p>
+<p><code>sed G filename</code> - adds empty line after each line</p>
 
     </body>
     </html>
