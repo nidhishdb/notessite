@@ -8,6 +8,12 @@
 
 >“You're going to pay a price for every bloody thing you do and everything you don't do. You don't get to choose to not pay a price. You get to choose which poison you're going to take. That's it." - *Jordan B Peterson*
 - - - -
+#### Articles:
+https://www.freecodecamp.org/news/how-to-take-any-aws-certification-from-home/
+
+https://www.freecodecamp.org/news/how-i-passed-the-aws-certified-developer-associate-exam/
+
+- - - -
 - What Is Cloud Computing?
 
 ```Cloud computing is the on-demand delivery of compute power, database storage, applications, and other IT resources through a cloud services platform via the internet with pay-as-you-go pricing.```
