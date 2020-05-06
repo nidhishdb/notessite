@@ -22,6 +22,8 @@ max-width: this property sets the maximum width of the element, if the content i
 #### CSS Grids: [cheatsheet](http://grid.malven.co/)
 https://css-tricks.com/snippets/css/complete-guide-grid/
 
+https://www.freecodecamp.org/news/the-ultimate-guide-to-css-flex/
+
 creating grids:
 
 `grid-template-columns: repeat(auto-fill,minmax(100px,1fr));`
