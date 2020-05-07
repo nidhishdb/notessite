@@ -110,6 +110,51 @@ This above command splits file4 into 2 lines per file and output newaa,newab,new
 <p><code>sed -n 5,9p filename</code> - shows lines from 5 to 9</p>
 <p><code>sed 5,9d filename</code> - show lines except 5 to 9</p>
 <p><code>sed G filename</code> - adds empty line after each line</p>
+<h4 id="user-account-management">User Account Management:</h4>
+<p>/etc/group file for group info</p>
+<p>/etc/passwd for user info</p>
+<p>/etc/shadow for password info</p>
+<p>commands:</p>
+<ul>
+<li>
+<p>id - to check if user exits</p>
+<p>id username</p>
+<p>info about user can be found at /etc/passwd</p>
+</li>
+<li>
+<p>useradd</p>
+<p><code>useradd username</code></p>
+<p><code>useradd -g groupname -s /bin/bash -c &quot;description of user&quot; -md /home/username username</code></p>
+<p>In the above command -m option tells to create home directory and -d specifies location of home directory of new user</p>
+</li>
+<li>
+<p>groupadd</p>
+<p>we can check if a group exits by accessing file /etc/group</p>
+</li>
+<li>
+<p>userdel</p>
+<p>we can delete the home directory of user when deleting his account by <code>userdel -r username</code></p>
+</li>
+<li>
+<p>groupdel</p>
+</li>
+<li>
+<p>usermod - command for user account modifications:</p>
+<p>usermod -G superheros spiderman</p>
+<p>above command adds user spiderman to superheros group</p>
+<ul>
+<li>
+<p>we can change group of user's home directory using chgrp:</p>
+<p><code>chgrp -R groupname file/dir</code>  - groupname is the name of the group you want to change it to</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="switch-users-and-sudo-access">Switch Users and Sudo Access:</h4>
+<p><code>su - username</code></p>
+<p>sudo command</p>
+<p>visudo</p>
+<p>/etc/sudoers</p>
 
     </body>
     </html>

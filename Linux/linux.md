@@ -123,3 +123,53 @@ sed:
 `sed 5,9d filename` - show lines except 5 to 9
 
 `sed G filename` - adds empty line after each line
+
+#### User Account Management:
+/etc/group file for group info
+
+/etc/passwd for user info
+
+/etc/shadow for password info
+
+commands:
+* id - to check if user exits
+  
+  id username
+
+  info about user can be found at /etc/passwd
+
+* useradd
+  
+  `useradd username`
+
+  `useradd -g groupname -s /bin/bash -c "description of user" -md /home/username username`
+
+  In the above command -m option tells to create home directory and -d specifies location of home directory of new user 
+  
+* groupadd
+
+  we can check if a group exits by accessing file /etc/group 
+
+* userdel
+    
+    we can delete the home directory of user when deleting his account by `userdel -r username`
+
+* groupdel
+* usermod - command for user account modifications:
+  
+  usermod -G superheros spiderman 
+  
+  above command adds user spiderman to superheros group
+  
+  * we can change group of user's home directory using chgrp: 
+    
+    `chgrp -R groupname file/dir`  - groupname is the name of the group you want to change it to 
+
+#### Switch Users and Sudo Access:
+`su - username`
+
+sudo command
+
+visudo 
+
+/etc/sudoers
