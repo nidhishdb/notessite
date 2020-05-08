@@ -1,5 +1,5 @@
 ## Linux
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="javascript logo" width=300 style="border-radius:4px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Gnu-linux_minimalistic_logo.svg" alt="linux logo">
 
 >“I don't think that you have any insight whatsoever into your capacity for good until you have some well-developed insight into your capacity for evil.” - *Jordan B. Peterson*
 - - - -
