@@ -1,4 +1,11 @@
 ## React JS
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+a{color:#2a2a35;background-color:#d5dcc3;padding:4px;border-radius:3px;}
+ body{background-color:#c6d2ac;color:#2a2a35;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
+ code{color:#2a2a35}
+</style>
 <img src="https://reactjs.org/logo-og.png" width=300 alt="react logo" style="border-radius:4px">
 
 >When something is important enough, you do it even if the odds are not in your favor - *Elon Musk*

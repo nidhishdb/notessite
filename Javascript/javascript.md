@@ -3,8 +3,11 @@
 
 >We are what we repeatedly do. Excellence, then, is not an act, but a habit. - *Aristotle*
 - - - -
-<style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
-/* body{background-color:darkgray} */
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+a{color:#2a2a35;background-color:#d5dcc3;padding:4px;border-radius:3px;}
+ body{background-color:#c6d2ac;color:#2a2a35;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
+ code{color:#2a2a35}
 </style>
 List of new JS features
 https://github.com/daumann/ECMAScript-new-features-list

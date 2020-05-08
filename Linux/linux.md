@@ -3,8 +3,11 @@
 
 >“I don't think that you have any insight whatsoever into your capacity for good until you have some well-developed insight into your capacity for evil.” - *Jordan B. Peterson*
 - - - -
-<style>a{color:#997;background-color:black;padding:4px;border-radius:3px;}
-/* body{background-color:darkgray} */
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+a{color:#2a2a35;background-color:#d5dcc3;padding:4px;border-radius:3px;}
+ body{background-color:#c6d2ac;color:#2a2a35;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
+ code{color:#2a2a35}
 </style>
 
 ls -ltr   --shows last modified in reverse order
