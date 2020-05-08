@@ -7,7 +7,7 @@ a{color:#2a2a35;background-color:#d5dcc3;padding:4px;border-radius:3px;}
  code{color:#2a2a35}
 </style>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" width=300 style="border-radius:4px" height=150>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/AmazonWebservices_Logo.svg/1200px-AmazonWebservices_Logo.svg.png">
 
 >“You're going to pay a price for every bloody thing you do and everything you don't do. You don't get to choose to not pay a price. You get to choose which poison you're going to take. That's it." - *Jordan B Peterson*
 - - - -
