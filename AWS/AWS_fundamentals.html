@@ -42,7 +42,7 @@ a{color:#2a2a35;background-color:#d5dcc3;padding:4px;border-radius:3px;}
 </ul>
 <p><code>Cloud computing is the on-demand delivery of compute power, database storage, applications, and other IT resources through a cloud services platform via the internet with pay-as-you-go pricing.</code></p>
 <p><a href="https://aws.amazon.com/what-is-cloud-computing/">https://aws.amazon.com/what-is-cloud-computing/</a>.</p>
-<p>Infrastructure:</p>
+<h4 id="infrastructure">Infrastructure:</h4>
 <p>Amazon cloud computing resources are hosted in multiple locations world-wide. These locations are composed of AWS Regions, Availability Zones, and Local Zones. Each AWS Region is a separate geographic area. Each AWS Region has multiple, isolated locations known as Availability Zones.Resources aren't replicated across AWS Regions unless you do so specifically.</p>
 <p>Each AWS Region is designed to be isolated from the other AWS Regions. This design achieves the greatest possible fault tolerance and stability.</p>
 <p>When you view your resources, you see only the resources that are tied to the AWS Region that you specified. This is because AWS Regions are isolated from each other, and we don't automatically replicate resources across AWS Regions.</p>
@@ -76,9 +76,9 @@ LightSail</p>
 <h4 id="container-servicesdockerecskuberneteseksserverlessaws-lambda">Container services:Docker:ECS,Kubernetes:EKS,serverless:aws lambda</h4>
 <p>Complete list can be found at:
 <a href="https://aws.amazon.com/products/compute/">https://aws.amazon.com/products/compute/</a></p>
-<h3 id="lightsail">Lightsail:</h3>
+<h4 id="lightsail">Lightsail:</h4>
 <p>Amazon Lightsail is the easiest way to get started with AWS for developers, small businesses, students, and other users who need a simple virtual private server (VPS) solution. Lightsail provides developers compute, storage, and networking capacity, and it also provides capabilities to deploy and manage websites and web applications in the cloud. Lightsail includes everything you need to launch your project quickly--a virtual machine, solid state drive (SSD)-based storage, data transfer, Domain Name System (DNS) management, and a static IP--for a low, predictable monthly price.</p>
-<h3 id="cidr-notation">CIDR Notation</h3>
+<h4 id="cidr-notation">CIDR Notation:</h4>
 <p>An important concept that's used in networking on AWS is CIDR, or Classless Inter-Domain Routing. CIDR network addresses are allocated in a virtual private cloud (VPC) and in a subnet by using CIDR notation. A /16 block provides 65,536 IPv4 addresses. A /24 block provides 256 addresses.</p>
 <p>CIDR calculator:
 <a href="http://www.subnet-calculator.com/cidr.php">http://www.subnet-calculator.com/cidr.php</a></p>
@@ -96,7 +96,7 @@ A VPC spans all the Availability Zones in the Region. After creating a VPC, you 
 <p>In each Region, AWS will provision a default VPC. This VPC has a /16 IPv4 CIDR address block of 172.31.0.0/16. This provides 65,536 private IPv4 addresses. In addition, there will be a /20 subnet that is created for each Availability Zone in the Region, which provides 4,096 addresses per subnet, with a few addresses reserved for AWS usage. The route table that is associated with the default VPC will have a public route, which in turn is associated with a provisioned internet gateway.</p>
 <p>You can modify or delete the default VPC if you want to do so.</p>
 <p>The most current details on the default VPC can be found here: <a href="https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html">https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html</a></p>
-<h3 id="storage">Storage</h3>
+<h4 id="storage">Storage</h4>
 <p>RDS :Object</p>
 <p>EBS:</p>
 <p>Block Storage (EBS) is stored independent of EC2.When a new instance of EC2 is created the old EBS volumes can be attached to it.</p>
@@ -112,6 +112,57 @@ A VPC spans all the Availability Zones in the Region. After creating a VPC, you 
 <p>Amazon EFS is designed to provide massively parallel shared access to thousands of Amazon EC2 instances. This enables your applications to achieve high levels of aggregate throughput and IOPS that scale as a file system grows, with consistent low latencies.</p>
 <p>When an Amazon EFS file system is mounted on Amazon EC2 instances, it provides a standard file system interface and file system access semantics, which allows you to seamlessly integrate Amazon EFS with your existing applications and tools. Multiple Amazon EC2 instances can access an Amazon EFS file system at the same time, thus allowing Amazon EFS to provide a common data source for workloads and applications that run on more than one Amazon EC2 instance.</p>
 <p>Current details on Amazon EFS can be found at: <a href="https://aws.amazon.com/efs/">https://aws.amazon.com/efs/</a></p>
+<h4 id="databases">Databases:</h4>
+<p>RDS - Amazon Relational database service(sql based database):</p>
+<p>Amazon Relational Database Service (Amazon RDS) makes it straightforward to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity while automating time-consuming administration tasks such as provisioning hardware, setting up the database, patching, and making backups.</p>
+<p>Amazon RDS currently supports six database engines:</p>
+<ul>
+<li>
+<p>Amazon Aurora: <a href="https://aws.amazon.com/rds/aurora/">https://aws.amazon.com/rds/aurora/</a></p>
+</li>
+<li>
+<p>PostgreSQL: <a href="https://aws.amazon.com/rds/postgresql/">https://aws.amazon.com/rds/postgresql/</a></p>
+</li>
+<li>
+<p>MySQL: <a href="https://aws.amazon.com/rds/mysql/">https://aws.amazon.com/rds/mysql/</a></p>
+</li>
+<li>
+<p>MariaDB: <a href="https://aws.amazon.com/rds/mariadb/">https://aws.amazon.com/rds/mariadb/</a></p>
+</li>
+<li>
+<p>Oracle: <a href="https://aws.amazon.com/rds/oracle/">https://aws.amazon.com/rds/oracle/</a></p>
+</li>
+<li>
+<p>Microsoft SQL Server: <a href="https://aws.amazon.com/rds/sqlserver/">https://aws.amazon.com/rds/sqlserver/</a></p>
+</li>
+</ul>
+<p>You can use the AWS Database Migration Service (AWS DMS) (<a href="https://aws.amazon.com/dms">https://aws.amazon.com/dms</a>) to quickly and securely migrate your databases to AWS.</p>
+<p>Amazon RDS is eligible for the AWS Free Tier. More details on pricing for Amazon RDS are available here: <a href="https://aws.amazon.com/rds/pricing/">https://aws.amazon.com/rds/pricing/</a></p>
+<hr>
+<p>DynomoDB (nosql database):
+<a href="https://aws.amazon.com/dynamodb">Amazon DynamoDB</a> is a fast and flexible NoSQL database service for applications that need consistent, single-digit millisecond latency at any scale. Its a fully managed cloud database, and it supports both document and key-value store models. Its flexible data model, reliable performance, and automatic scaling of throughput capacity make it a great fit for mobile, web, gaming, advertising technology (ad tech), Internet of Things (IoT), and many other applications. <a href="https://aws.amazon.com/dynamodb/pricing/">Pricing for DynamoDB</a> includes a non-expiring AWS Free Tier allotment.</p>
+<h4 id="amazon-cloudwatch">Amazon CloudWatch</h4>
+<p><a href="https://aws.amazon.com/cloudwatch/">Amazon CloudWatch</a> is a monitoring service for AWS Cloud resources and the applications that you run on AWS. You can use Amazon CloudWatch to collect and track metrics, collect and monitor log files, set alarms, and automatically react to changes in your AWS resources.</p>
+<hr>
+<p>Amazon CloudWatch Events:</p>
+<p><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html">Amazon CloudWatch Events</a> delivers a near real-time stream of system events that describe changes in AWS resources. Using simple rules that you can quickly set up, you can match events and route them to one or more target functions or streams. CloudWatch Events becomes aware of operational changes as they occur.</p>
+<hr>
+<p>Amazon CloudWatch Logs Metrics:</p>
+<p>You can use <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html">Amazon CloudWatch Logs</a> to monitor, store, and access your log files from Amazon EC2 instances, AWS CloudTrail, Amazon Route 53, and other sources. You can then retrieve the associated log data from CloudWatch Logs.</p>
+<p>You can collect <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CW_Support_For_AWS.html">metrics</a> from servers by installing the CloudWatch agent on the server. You can install the agent on both Amazon EC2 instances and on-premises servers, and on servers that run either Linux or Windows Server.</p>
+<h4 id="elastic-load-balancing">Elastic Load Balancing:</h4>
+<p><a href="https://aws.amazon.com/elasticloadbalancing/">Elastic Load Balancing (ELB)</a> automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, and IP addresses. It can handle the varying load of your application traffic in a single Availability Zone or across multiple Availability Zones.</p>
+<p>ELB offers three types of load balancers that all feature the high availability, automatic scaling, and robust security that are necessary to make your applications fault-tolerant.</p>
+<p>An Application Load Balancer operates at the request level (Layer 7), routing traffic to targets--such as EC2 instances, microservices and containers--within Amazon VPC, based on the content of the request. It's ideal for the advanced load balancing of Hypertext Transfer Protocol (HTTP) and Secure HTTP (HTTPS) traffic.</p>
+<p>A Network Load Balancer operates at the connection level (Layer 4), routing connections to targets--such as Amazon EC2 instances, microservices, and containers--within Amazon VPC, based on IP protocol data. It's ideal for load-balancing Transmission Control Protocol (TCP) traffic.</p>
+<p>The Classic Load Balancer provides basic load balancing across multiple Amazon EC2 instances, and it operates at both the request level and the connection level.</p>
+<h4 id="auto-scaling">Auto scaling:</h4>
+<p><a href="https://aws.amazon.com/ec2/autoscaling">Amazon EC2 Auto Scaling</a> helps you maintain application availability, and it allows you to dynamically scale your Amazon EC2 capacity up or down automatically according to conditions that you define. You can use Amazon EC2 Auto Scaling for fleet management of Amazon EC2 instances, which can help maintain the health and availability of your fleet, and ensure that you are running your desired number of Amazon EC2 instances. You can also use Amazon EC2 Auto Scaling to dynamically scale Amazon EC2 instances. Dynamic scaling automatically increases the number of Amazon EC2 instances during demand spikes to maintain performance and decrease capacity during lulls, which can help reduce costs. Amazon EC2 Auto Scaling is well-suited to applications that have stable demand patterns, or applications that experience hourly, daily, or weekly variability in usage.</p>
+<h4 id="aws-cost-explorer">AWS Cost Explorer:</h4>
+<p><a href="https://aws.amazon.com/aws-cost-management/aws-cost-explorer/">AWS Cost Explorer</a> lets you visualize, understand, and manage your AWS costs and usage over time. You can create custom reports (including charts and tabular data) that analyze cost and usage data, both at a high level (e.g., total costs and usage across all accounts) and for highly specific requests (e.g., m2.2xlarge costs within account Y that are tagged project: secretProject).</p>
+<hr>
+<p>AWS Trusted Advisor:</p>
+<p><a href="https://aws.amazon.com/premiumsupport/trustedadvisor/">AWS Trusted Advisor</a> is an online resource to help you reduce costs, increase performance, and improve security by optimizing your AWS environment. Trusted Advisor provides real-time guidance to help you provision your resources by following our best practices.</p>
 
     </body>
     </html>
