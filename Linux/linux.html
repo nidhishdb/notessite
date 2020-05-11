@@ -24,7 +24,7 @@
         <h2 id="linux">Linux</h2>
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Gnu-linux_minimalistic_logo.svg" alt="linux logo">
 <blockquote>
-<p>“I don't think that you have any insight whatsoever into your capacity for good until you have some well-developed insight into your capacity for evil.” - <em>Jordan B. Peterson</em></p>
+<p>“Look at you hacker, a pathetic creature of meat and bone, panting and gasping as you run through my corridors, How can you challenge me? A perfect immortal machine&quot; - Shodan,Systemshock</p>
 </blockquote>
 <hr>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -158,6 +158,62 @@ This above command splits file4 into 2 lines per file and output newaa,newab,new
 <p>sudo command</p>
 <p>visudo</p>
 <p>/etc/sudoers</p>
+<h4 id="monitoring-users">Monitoring users:</h4>
+<p><code>who</code> command is used to check how many users are logged into the system</p>
+<p><code>last</code> command shows you every user who has logged into the system till date</p>
+<p><code>w</code> command gives you more details than <code>who</code> command</p>
+<p><code>finger</code> command</p>
+<p><code>users</code> prints the name of the users currently logged into the current host</p>
+<p><code>wall</code> write a message to all users</p>
+<h4 id="directory-services">Directory Services</h4>
+<p>LDAP(Lightweight Directory Access Protocol) : protocol used to communicate between the active directory server</p>
+<ul>
+<li>
+<p>Windows: Active Directory</p>
+</li>
+<li>
+<p>IDM (Identity Manager): Linux alternative to Active Directory by RedHat. It is proprietory software</p>
+</li>
+</ul>
+<p>*OpenLDAP (Opensource):It is a opensource alternative to IDM which is proprietory</p>
+<ul>
+<li>IBM Directory Server</li>
+</ul>
+<p>*JumpCloud</p>
+<p>WinBIND: allows active directory users to login into linux machine</p>
+<h4 id="system-utility-command">System Utility Command</h4>
+<p><code>date</code></p>
+<p><code>uptime</code></p>
+<p><code>hostname</code></p>
+<p><code>uname -a</code> - show info of linux ditro</p>
+<p><code>which commandname</code> show path of command</p>
+<p><code>cal</code> -calendar</p>
+<p><code>bc</code> - calculator</p>
+<h4 id="processes">processes</h4>
+<p><code>ps</code></p>
+<p>example: <code>ps -ef</code> list all process in long format</p>
+<p><code>systemctl</code>:</p>
+<p>example: systemctl enable servicename - to enable it at boot time</p>
+<p>systemctl disable servicename - to disable it at boot time</p>
+<p>systemctl start servicename</p>
+<p>systemctl stop servicename</p>
+<p>systemctl status servicename</p>
+<p>systemctl restart servicename</p>
+<p><code>kill</code></p>
+<p><code>crontab -e</code> edit crontab file</p>
+<p>There are four crontab files in /etc/cron.___(directory) for running jobs:</p>
+<ul>
+<li>Daily</li>
+<li>Hourly</li>
+<li>Weekly</li>
+<li>Monthly</li>
+</ul>
+<p>you can put the scripts to be run in these directories,cron will automatically run it when the time comes</p>
+<p>The timing for each are set in</p>
+<ul>
+<li>/etc/anacrontab   --except hourly jobs</li>
+</ul>
+<p>the hourly timings are defined in /etc/cron.d/hourly</p>
 
     </body>
     </html>

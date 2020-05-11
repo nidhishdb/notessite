@@ -1,7 +1,7 @@
 ## Linux
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Gnu-linux_minimalistic_logo.svg" alt="linux logo">
 
->“I don't think that you have any insight whatsoever into your capacity for good until you have some well-developed insight into your capacity for evil.” - *Jordan B. Peterson*
+>“Look at you hacker, a pathetic creature of meat and bone, panting and gasping as you run through my corridors, How can you challenge me? A perfect immortal machine" - Shodan,Systemshock 
 - - - -
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <style>
@@ -176,3 +176,87 @@ sudo command
 visudo 
 
 /etc/sudoers
+
+#### Monitoring users:
+`who` command is used to check how many users are logged into the system
+
+`last` command shows you every user who has logged into the system till date
+
+`w` command gives you more details than `who` command
+
+`finger` command
+
+`users` prints the name of the users currently logged into the current host
+
+`wall` write a message to all users
+
+#### Directory Services
+LDAP(Lightweight Directory Access Protocol) : protocol used to communicate between the active directory server
+
+* Windows: Active Directory
+
+* IDM (Identity Manager): Linux alternative to Active Directory by RedHat. It is proprietory software
+
+*OpenLDAP (Opensource):It is a opensource alternative to IDM which is proprietory
+
+* IBM Directory Server
+
+*JumpCloud
+
+WinBIND: allows active directory users to login into linux machine
+
+#### System Utility Command
+
+`date`
+
+`uptime`
+
+`hostname`
+
+`uname -a` - show info of linux ditro 
+
+`which commandname` show path of command
+
+`cal` -calendar
+
+`bc` - calculator
+
+#### processes
+`ps` 
+
+example: `ps -ef` list all process in long format
+
+`systemctl`:
+
+example: systemctl enable servicename - to enable it at boot time
+
+systemctl disable servicename - to disable it at boot time
+
+systemctl start servicename 
+
+systemctl stop servicename 
+
+systemctl status servicename 
+
+systemctl restart servicename 
+
+`kill`
+
+`crontab -e` edit crontab file
+
+There are four crontab files in /etc/cron.___(directory) for running jobs:
+
+* Daily
+* Hourly
+* Weekly
+* Monthly
+
+you can put the scripts to be run in these directories,cron will automatically run it when the time comes
+
+The timing for each are set in 
+* /etc/anacrontab   --except hourly jobs
+
+the hourly timings are defined in /etc/cron.d/hourly
+
+
+

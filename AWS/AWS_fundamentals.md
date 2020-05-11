@@ -195,3 +195,12 @@ AWS Trusted Advisor:
 
 [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor/) is an online resource to help you reduce costs, increase performance, and improve security by optimizing your AWS environment. Trusted Advisor provides real-time guidance to help you provision your resources by following our best practices.
 
+#### AWS Identity and Access Management (IAM):
+ AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources. 
+
+IAM is a feature of your AWS account offered at no additional charge. You will be charged only for use of other AWS services by your users.
+
+To get started using IAM, or if you have already registered with AWS, go to the AWS Management Console and get started with these IAM Best Practices.
+
+#### AWS Organizations
+AWS Organizations helps you centrally govern your environment as you grow and scale your workloads on AWS. Whether you are a growing startup or a large enterprise, Organizations helps you to centrally manage billing; control access, compliance, and security; and share resources across your AWS accounts.  More information on AWS Organizations can be found at: https://aws.amazon.com/organizations/
