@@ -1,6 +1,13 @@
 ## Javascript
 
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+<div class="animated fadeIn">
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript logo" width=300 style="border-radius:4px">
+
 
 >We are what we repeatedly do. Excellence, then, is not an act, but a habit. - *Aristotle*
 - - - -

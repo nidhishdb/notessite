@@ -1,5 +1,10 @@
 # Amazon Web Services
 
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+<div class="animated fadeIn">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <style>
 a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
@@ -10,7 +15,7 @@ a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
  box-shadow: 0px 0px 2px 1px #00000070;
 }
 </style>
-<div style="background-color:#403d39;padding:10px;border-radius:10px">
+<div style="background-color:#d7cfa5;padding:10px;border-radius:10px">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/AmazonWebservices_Logo.svg/1200px-AmazonWebservices_Logo.svg.png"></div>
 
 >“Nothing is true. Everything is permitted" - Ezio Auditore da Firenze (Assassin's Creed)

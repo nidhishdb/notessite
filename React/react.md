@@ -1,6 +1,13 @@
 ## React JS
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+<div class="animated fadeIn">
+
 <style>
 a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
  body{background-color:#0c1821;color:#faedcb;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
@@ -9,7 +16,7 @@ a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
   background-color: rgba(32, 33, 36, 0.4);
   box-shadow: 0px 0px 2px 1px #00000070;
 </style>
-<div style="background-color:#403d39;padding:10px;border-radius:10px">
+<div style="background-color:#599181;padding:10px;border-radius:10px">
 <img src="https://risingstack-blog.s3.amazonaws.com/2016/Jun/react_best_practices_1453211146748-1466684142679.png"></div>
 
 >When something is important enough, you do it even if the odds are not in your favor - *Elon Musk*

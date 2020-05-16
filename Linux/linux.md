@@ -1,6 +1,13 @@
 ## Linux
-<div style="background-color:#403d39;padding:10px;border-radius:10px">
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+<div class="animated fadeIn">
+
+<div style="background-color:#d7cfa5;border-radius:10px">
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Gnu-linux_minimalistic_logo.svg" alt="linux logo"></div>
+
 
 >“Look at you hacker, a pathetic creature of meat and bone, panting and gasping as you run through my corridors, How can you challenge me? A perfect immortal machine" - Shodan,Systemshock 
 - - - -
@@ -10,8 +17,8 @@ a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
  body{background-color:#0c1821;color:#faedcb;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
  code{color:#eb5e28;}
  .vscode-light pre {
-  background-color: rgba(32, 33, 36, 0.4);
-  box-shadow: 0px 0px 2px 1px #00000070;
+ background-color: rgba(32, 33, 36, 0.4);
+ box-shadow: 0px 0px 2px 1px #00000070;
 }
 </style>
 

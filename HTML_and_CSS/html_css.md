@@ -1,5 +1,10 @@
 # HTML and CSS
 
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+<div class="animated fadeIn">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <style>
 a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
