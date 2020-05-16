@@ -13,7 +13,7 @@ a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
 <div style="background-color:#403d39;padding:10px;border-radius:10px">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/AmazonWebservices_Logo.svg/1200px-AmazonWebservices_Logo.svg.png"></div>
 
->“You're going to pay a price for every bloody thing you do and everything you don't do. You don't get to choose to not pay a price. You get to choose which poison you're going to take. That's it." - *Jordan B Peterson*
+>“Nothing is true. Everything is permitted" - Ezio Auditore da Firenze (Assassin's Creed)
 - - - -
 #### Articles:
 https://www.freecodecamp.org/news/how-to-take-any-aws-certification-from-home/
