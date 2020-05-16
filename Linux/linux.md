@@ -1,13 +1,18 @@
 ## Linux
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Gnu-linux_minimalistic_logo.svg" alt="linux logo">
+<div style="background-color:#403d39;padding:10px;border-radius:10px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Gnu-linux_minimalistic_logo.svg" alt="linux logo"></div>
 
 >“Look at you hacker, a pathetic creature of meat and bone, panting and gasping as you run through my corridors, How can you challenge me? A perfect immortal machine" - Shodan,Systemshock 
 - - - -
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <style>
-a{color:#2a2a35;background-color:#d5dcc3;padding:4px;border-radius:3px;}
- body{background-color:#c6d2ac;color:#2a2a35;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
- code{color:#2a2a35}
+a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
+ body{background-color:#0c1821;color:#faedcb;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
+ code{color:#eb5e28;}
+ .vscode-light pre {
+   color:white;
+    background-color: rgba(60, 45, 45, 0.4);
+}
 </style>
 
 ls -ltr   --shows last modified in reverse order

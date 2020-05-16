@@ -1,13 +1,18 @@
 ## Javascript
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript logo" width=300 style="border-radius:4px">
 
 >We are what we repeatedly do. Excellence, then, is not an act, but a habit. - *Aristotle*
 - - - -
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <style>
-a{color:#2a2a35;background-color:#d5dcc3;padding:4px;border-radius:3px;}
- body{background-color:#c6d2ac;color:#2a2a35;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
- code{color:#2a2a35}
+a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
+ body{background-color:#0c1821;color:#faedcb;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
+ code{color:#eb5e28;}
+ .vscode-light pre {
+   color:white;
+    background-color: rgba(60, 45, 45, 0.4);
+}
 </style>
 List of new JS features
 https://github.com/daumann/ECMAScript-new-features-list

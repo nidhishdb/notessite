@@ -29,9 +29,13 @@
 <hr>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <style>
-a{color:#2a2a35;background-color:#d5dcc3;padding:4px;border-radius:3px;}
- body{background-color:#c6d2ac;color:#2a2a35;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
- code{color:#2a2a35}
+a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
+ body{background-color:#0c1821;color:#faedcb;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
+ code{color:#eb5e28;}
+ .vscode-light pre {
+   color:white;
+    background-color: rgba(60, 45, 45, 0.4);
+}
 </style>
 List of new JS features
 https://github.com/daumann/ECMAScript-new-features-list
@@ -240,7 +244,7 @@ b.d = <span class="hljs-string">'d'</span>;
 <span class="hljs-built_in">console</span>.log(b); <span class="hljs-comment">// { a: 'a', b: 'b', c: 'c', d: 'd' }</span>
 </div></code></pre>
 <p>Objects: Pass by <strong>value</strong> copy:</p>
-<pre><code class="language-js"><div><span class="hljs-comment">/*Note: This only does a shallow copy,see below for deep clone (copying nested objects)*/</span>
+<pre><code class="language-js"><div><span class="hljs-comment">/*<span class="hljs-doctag">Note:</span> This only does a shallow copy,see below for deep clone (copying nested objects)*/</span>
 <span class="hljs-keyword">let</span> a = {
     <span class="hljs-attr">a</span>:<span class="hljs-string">'a'</span>,
     <span class="hljs-attr">b</span>:<span class="hljs-string">'b'</span>,
