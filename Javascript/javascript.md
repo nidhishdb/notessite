@@ -11,7 +11,8 @@ a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
  code{color:#eb5e28;}
  .vscode-light pre {
    color:white;
-    background-color: rgba(60, 45, 45, 0.4);
+   background-color: rgba(50, 52, 60, 0.4);
+   box-shadow: 0px 0px 2px 1px black;
 }
 </style>
 List of new JS features
