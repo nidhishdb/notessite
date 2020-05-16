@@ -6,9 +6,8 @@ a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
  body{background-color:#0c1821;color:#faedcb;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
  code{color:#eb5e28;}
  .vscode-light pre {
-   color:white;
-   background-color: rgba(50, 52, 60, 0.4);
-   box-shadow: 0px 0px 2px 1px black;
+  background-color: rgba(32, 33, 36, 0.4);
+  box-shadow: 0px 0px 2px 1px #00000070;
 }
 </style>
 
