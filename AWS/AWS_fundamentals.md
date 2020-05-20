@@ -369,3 +369,13 @@ AWS Secrets Manager helps you protect secrets needed to access your applications
 
 #### AWS Well-Architected
 The Well-Architected Framework has been developed to help cloud architects build secure, high-performing, resilient, and efficient infrastructure for their applications. Based on five pillars — operational excellence, security, reliability, performance efficiency, and cost optimization — the Framework provides a consistent approach for customers and partners to evaluate architectures, and implement designs that will scale over time.
+
+### Migration:
+
+* Migration Preparation and Business Planning
+* Portfolio discovery and planning
+* Designing,Migrating and planning your applications
+* Operate
+
+6Rs of Migrating to the cloud:
+https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/
