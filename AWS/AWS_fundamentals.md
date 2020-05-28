@@ -25,6 +25,8 @@ https://www.freecodecamp.org/news/how-to-take-any-aws-certification-from-home/
 
 https://www.freecodecamp.org/news/how-i-passed-the-aws-certified-developer-associate-exam/
 
+https://adayinthelifeof.nl/2020/05/20/aws.html - AWS services explained in a single line
+
 - - - -
 - What Is Cloud Computing?
 
