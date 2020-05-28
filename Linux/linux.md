@@ -11,6 +11,9 @@
 
 >“Look at you hacker, a pathetic creature of meat and bone, panting and gasping as you run through my corridors, How can you challenge me? A perfect immortal machine" - Shodan,Systemshock 
 - - - -
+### Articles:
+https://www.usenix.org/sites/default/files/conference/protected-files/lisa19_maheshwari.pdf
+- - - -
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <style>
 a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
