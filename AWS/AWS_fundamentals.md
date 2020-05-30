@@ -381,3 +381,16 @@ The Well-Architected Framework has been developed to help cloud architects build
 
 6Rs of Migrating to the cloud:
 https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/
+
+----
+#### A​WS Cloud Adoption Framework (AWS CAF):
+
+[The AWS Cloud Adoption Framework (AWS CAF)](https://aws.amazon.com/professional-services/CAF/) organizes guidance into six areas of focus, called perspectives. Each perspective covers distinct responsibilities owned or managed by functionally related stakeholders. In general, the Business, People, and Governance Perspectives focus on business capabilities; while the Platform, Security, and Operations Perspectives focus on technical capabilities.
+
+This content is part of [Amazon Web Services (AWS) Prescriptive Guidance](https://docs.aws.amazon.com/prescriptive-guidance/latest/mrp-solution/overview.html), which provides time-tested strategies, guides, and patterns to help accelerate your cloud adoption
+
+----
+How to Migrate:
+
+The [four-phase migration process](https://aws.amazon.com/cloud-migration/how-to-migrate/) is designed to help your organization approach a migration of tens, hundreds, or thousands of applications. While each phase is a common component of a successful migration, they are not discrete phases, but an iterative process.
+
