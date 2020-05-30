@@ -64,6 +64,7 @@ Linux Wildcards:
 
 
 chown: to change the owner of the file or directory
+
 chgrp: to change the group of the file or directory
 
 chown parserite:parserite changes the owner and group of the file or directory
@@ -81,19 +82,23 @@ variables and also display the result.
 
 pipes: A pipe is used by the shell to connect the output of one command directlt
 to the input of another command.
+
 syntax: command1 [arguements] | command2 [arguements]
 
 ll: long list
 
 cut -c1 filename     - to get the first line of characters
+
 cut -c1-4 filename - to get character lines from 1-4 range
 
 awk:separates each column in a file
+
 awk '{print $1}'    - gives the first column in a file
 
 grep:searches for patterns in each file.
 
 sort- sort filename         -sorts alphabetically
+
 sort -r filename            -sort reverse alphabetically
 
 uniq- removes repeated lines in a file (have to `sort` it before piping it to uniq)
@@ -101,9 +106,11 @@ uniq- removes repeated lines in a file (have to `sort` it before piping it to un
 wc - count the number of lines,words,bytes of file
 
 tar cvf out.tar files/directory   -create tarball
+
 tar xvf file.tar                  -extract tarball
 
 gzip file   -compress file
+
 gzip -d or gunzip compressed-filename  -decompress file
 
 xz filename -compress

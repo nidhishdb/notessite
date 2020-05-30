@@ -80,8 +80,8 @@ b block device</li>
 ?
 [] -  matches any occurrence of character
 {} - suited for numbers (? incomplete)</p>
-<p>chown: to change the owner of the file or directory
-chgrp: to change the group of the file or directory</p>
+<p>chown: to change the owner of the file or directory</p>
+<p>chgrp: to change the group of the file or directory</p>
 <p>chown parserite:parserite changes the owner and group of the file or directory</p>
 <p>whatis: shows a small description of a command
 command --help:shows a smaller help page
@@ -92,22 +92,22 @@ the output of a program so that it can be both displayed and saved in a file. It
 does both the tasks simultaneosly,copies the result into the specified files or
 variables and also display the result.</p>
 <p>pipes: A pipe is used by the shell to connect the output of one command directlt
-to the input of another command.
-syntax: command1 [arguements] | command2 [arguements]</p>
+to the input of another command.</p>
+<p>syntax: command1 [arguements] | command2 [arguements]</p>
 <p>ll: long list</p>
-<p>cut -c1 filename     - to get the first line of characters
-cut -c1-4 filename - to get character lines from 1-4 range</p>
-<p>awk:separates each column in a file
-awk '{print $1}'    - gives the first column in a file</p>
+<p>cut -c1 filename     - to get the first line of characters</p>
+<p>cut -c1-4 filename - to get character lines from 1-4 range</p>
+<p>awk:separates each column in a file</p>
+<p>awk '{print $1}'    - gives the first column in a file</p>
 <p>grep:searches for patterns in each file.</p>
-<p>sort- sort filename         -sorts alphabetically
-sort -r filename            -sort reverse alphabetically</p>
+<p>sort- sort filename         -sorts alphabetically</p>
+<p>sort -r filename            -sort reverse alphabetically</p>
 <p>uniq- removes repeated lines in a file (have to <code>sort</code> it before piping it to uniq)</p>
 <p>wc - count the number of lines,words,bytes of file</p>
-<p>tar cvf out.tar files/directory   -create tarball
-tar xvf file.tar                  -extract tarball</p>
-<p>gzip file   -compress file
-gzip -d or gunzip compressed-filename  -decompress file</p>
+<p>tar cvf out.tar files/directory   -create tarball</p>
+<p>tar xvf file.tar                  -extract tarball</p>
+<p>gzip file   -compress file</p>
+<p>gzip -d or gunzip compressed-filename  -decompress file</p>
 <p>xz filename -compress
 xz -d filename -decompress</p>
 <p>truncate - shrink or extend the size of a file to the specified size (it causes data to be deleted in order to shrink the size of the file and adds junk values to extend the file size)
