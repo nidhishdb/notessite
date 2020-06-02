@@ -454,4 +454,22 @@ Amazon Aurora is a fully managed relational database engine that's compatible wi
 
 With AWS DMS, you can perform one-time migrations, and you can replicate ongoing changes to keep sources and targets in sync. Checkout [How AWS Database Migration Service Works](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.html) for more info. If you want to change database engines, you can use the [AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Welcome.html) (AWS SCT) to translate your database schema to the new platform. You then use AWS DMS to migrate the data.
 
+----
+
+#### Make Migration Easier:
+Tools like the [AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html), [AWS Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html), and [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-whatis-howdoesitwork.html) all provide methods for you to automate actions being taken will not losing control over what you are doing. These enable the ability to make API calls to AWS in order to launch, configure, and manage services as well as giving access for control and management tasks within your servers’ systems. Here are additional resources that you might want checkout:
+
+* [Working with SSM Agent](https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html)
+
+* [A​WS CloudFormation Templates](https://aws.amazon.com/cloudformation/aws-cloudformation-templates/)
+
+#### A​dditional Migration Resources:
+AWS provides many tools to give you more of a hands-off approach to your migration tasks. Whether handling assessment, planning, or full application migration, there are several tools within AWS to utilize. 
+
+* [Mi​grate to AWS with Confidence](https://aws.amazon.com/cloud-migration/#tools-and-services)
+* [T​SO Logic](https://tsologic.com/)
+* [C​loudEndure](https://www.cloudendure.com/live-migration/aws/)
+
+#### Migration Delivery Partners
+[Migration Delivery Partners](https://aws.amazon.com/migration/partner-solutions/) help customers through every stage of migration, accelerating results by providing personnel, tools, and education in the form of professional services. These partners either are, or have a relationship with, an AWS audited Managed Service Provider to help customers with ongoing support of AWS workloads.
 
