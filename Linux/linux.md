@@ -9,7 +9,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Gnu-linux_minimalistic_logo.svg" alt="linux logo"></div>
 
 
->“Look at you hacker, a pathetic creature of meat and bone, panting and gasping as you run through my corridors, How can you challenge me? A perfect immortal machine" - Shodan,Systemshock 
+> It’s something like going on an ocean voyage. What can I do? Pick the captain, the boat, the date, and the best time to sail. But then a storm hits… What are my options? I do the only thing I am in a position to do, drown — but fearlessly, without bawling or crying out to God, because I know that what is born must also die. - Epictetus, Discourses
 - - - -
 ### Articles:
 https://www.usenix.org/sites/default/files/conference/protected-files/lisa19_maheshwari.pdf

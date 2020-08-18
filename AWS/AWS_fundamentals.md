@@ -18,7 +18,7 @@ a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
 <div style="background-color:#d7cfa5;padding:10px;border-radius:10px">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/AmazonWebservices_Logo.svg/1200px-AmazonWebservices_Logo.svg.png"></div>
 
->“Nothing is true. Everything is permitted" - Ezio Auditore da Firenze (Assassin's Creed)
+> If a person doesn’t know to which port they sail, no wind is favourable -Seneca
 - - - -
 #### Articles:
 https://www.freecodecamp.org/news/how-to-take-any-aws-certification-from-home/

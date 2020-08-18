@@ -18,7 +18,7 @@ a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
 
 <img src="https://miro.medium.com/max/2688/1*Q8w9PI58DKjolhl5aDeiOQ.png" width=300 style="border-radius:4px">
 
->I think it is possible for ordinary people to choose to be extraordinary - *Elon Musk*
+> Throw out your conceited opinions, for it is impossible for a person to begin to learn what he thinks he already knows - Epictetus
 - - - -
 ## CSS
 [30 CSS Selectors to Memorize](https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
