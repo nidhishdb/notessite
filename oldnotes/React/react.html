@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>React JS</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h2 id="react-js">React JS</h2>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+<div class="animated fadeIn">
+<style>
+a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
+ body{background-color:#0c1821;color:#faedcb;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
+ code{color:#eb5e28;}
+ .vscode-light pre {
+  background-color: rgba(32, 33, 36, 0.4);
+  box-shadow: 0px 0px 2px 1px #00000070;
+</style>
+<div style="background-color:#599181;padding:10px;border-radius:10px">
+<img src="https://risingstack-blog.s3.amazonaws.com/2016/Jun/react_best_practices_1453211146748-1466684142679.png"></div>
+<blockquote>
+<p>When something is important enough, you do it even if the odds are not in your favor - <em>Elon Musk</em></p>
+</blockquote>
+<hr>
+<h4 id="getting-started">Getting started</h4>
+<p>You can start a project by running CRA with npx - <code>sudo npx create-react-app project-name</code>, by doing this you won't have to install create-react-app globally.
+(npx comes with npm 5.2+ and higher)</p>
+<p>If you use npm 5.1 or earlier, you can't use <code>npx</code>. Instead, install <code>create-react-app</code> globally:</p>
+<p><code>npm install -g create-react-app </code></p>
+<p>Now you can run:</p>
+<p><code>create-react-app my-app</code></p>
+<h4 id="deployment-with-cra">Deployment with CRA</h4>
+<p><a href="https://create-react-app.dev/docs/deployment/#github-pages-https-pagesgithubcom">https://create-react-app.dev/docs/deployment/#github-pages-https-pagesgithubcom</a></p>
+<h4 id="fragment"><code>&lt;Fragment&gt;</code></h4>
+<p>Too many <code>&lt;div&gt;</code> tags clutering your JSX? NO PROBLEM, write semantic JSX with <code>&lt;Fragment&gt;</code> (React 16+) - <a href="http://blog.jmes.tech/react-fragment-and-semantic-html/">http://blog.jmes.tech/react-fragment-and-semantic-html/</a></p>
+<p>When creating methods inside a component use a arrow function, as it sets it's <code>this</code> to the component it is in.</p>
+<h4 id="lifecycle-hooks">Lifecycle hooks</h4>
+<p><a href="https://reactjs.org/docs/react-component.html">https://reactjs.org/docs/react-component.html</a></p>
+<h4 id="propschildren">props.children</h4>
+<p>Components that wrap around other components can be accessed through props.children</p>
+<pre><code class="language-js"><div>    &lt;Scroll&gt;
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Card</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Scroll</span>&gt;</span></span>
+</div></code></pre>
+<p>Here <code>&lt;Card /&gt;</code> component is passed down as a Prop to <code>&lt;Scroll&gt;</code> Component.</p>
+<h4 id="errorboundaries-react16---componentdidcatch">ErrorBoundaries (React16+) - componentDidCatch():</h4>
+<p><a href="https://reactjs.org/docs/error-boundaries.html">https://reactjs.org/docs/error-boundaries.html</a></p>
+<p>Error boundaries work like a JavaScript catch {} block, but for components. Only class components can be error boundaries. In practice, most of the time you’ll want to declare an error boundary component once and use it throughout your application.</p>
+<p>Note that error boundaries only catch errors in the components below them in the tree. An error boundary can’t catch an error within itself. If an error boundary fails trying to render the error message, the error will propagate to the closest error boundary above it.</p>
+
+    </body>
+    </html>

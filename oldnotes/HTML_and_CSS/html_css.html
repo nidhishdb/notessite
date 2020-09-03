@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML and CSS</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="html-and-css">HTML and CSS</h1>
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+<div class="animated fadeIn">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+a{color:#faedcb;background-color:#403d39;padding:4px;border-radius:3px;}
+ body{background-color:#0c1821;color:#faedcb;line-height:2.0rem;font-size:1.0em;font-family:Montserrat}
+ code{color:#eb5e28;}
+ .vscode-light pre {
+  background-color: rgba(32, 33, 36, 0.4);
+  box-shadow: 0px 0px 2px 1px #00000070;
+}
+</style>
+<img src="https://miro.medium.com/max/2688/1*Q8w9PI58DKjolhl5aDeiOQ.png" width=300 style="border-radius:4px">
+<blockquote>
+<p>Throw out your conceited opinions, for it is impossible for a person to begin to learn what he thinks he already knows — Epictetus</p>
+</blockquote>
+<hr>
+<h2 id="css">CSS</h2>
+<p><a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">30 CSS Selectors to Memorize</a></p>
+<p>centering element: margin: 0px auto;</p>
+<p>max-width: this property sets the maximum width of the element, if the content is larger than the maximum width, it will automatically change the height of the element.</p>
+<h4 id="backgroundimagehttpscss-trickscomperfect-full-page-background-image">backgroundimage:<a href="https://css-tricks.com/perfect-full-page-background-image/">https://css-tricks.com/perfect-full-page-background-image/</a></h4>
+<h4 id="animatecss---animation-library-to-add-quick-animations"><a href="https://daneden.github.io/animate.css/">Animate.CSS - animation library to add quick animations</a></h4>
+<h4 id="css-grids-cheatsheet">CSS Grids: <a href="http://grid.malven.co/">cheatsheet</a></h4>
+<p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a></p>
+<p><a href="https://www.freecodecamp.org/news/the-ultimate-guide-to-css-flex/">https://www.freecodecamp.org/news/the-ultimate-guide-to-css-flex/</a></p>
+<p>creating grids:</p>
+<p><code>grid-template-columns: repeat(auto-fill,minmax(100px,1fr));</code></p>
+<p><code>grid-auto-rows:100px;</code> this is done to implicitly set the rows</p>
+<p><code>grid-auto-flow:dense;</code> to place items wherever space is available and not leave whitespaces. By default the value is <code>row</code></p>
+<p><code>justify-items</code> is used to justify items inside the container.<br>
+<code>align-items</code> is used to align items inside the container.</p>
+<p><code>justify-self</code> is used to justify the individual item inside the container.<br>
+<code> align-self</code> is used to align the individual item inside the container.</p>
+<h4 id="justify-content-and-align-content">justify-content and align-content</h4>
+<p><code>justify-content</code> property is used to align the whole grid inside the container.<br>
+<code>align-content</code> property is used to vertically align the whole grid inside the container. Both above properties take values:</p>
+<ul>
+<li>center</li>
+<li>space-around</li>
+<li>space-evenly</li>
+<li>space-between</li>
+<li>start</li>
+<li>end</li>
+</ul>
+<h3 id="flexbox">Flexbox:</h3>
+<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+<p><a href="https://darekkay.com/dev/flexbox-cheatsheet.html">flexbox cheatsheet</a></p>
+<p><a href="http://flexboxfroggy.com">flexbox game</a></p>
+<p>Flexbox Notes:</p>
+<h4 id="flex-direction">Flex direction:</h4>
+<p>Defines the direction of the main axis.</p>
+<p>It takes the values:</p>
+<ul>
+<li>row</li>
+<li>row-reverse</li>
+<li>column</li>
+<li>column-reverse</li>
+</ul>
+<p>By default all element are set <code>flex-direction</code> property to row,which makes all elements to be displayed from left to right.</p>
+<ul>
+<li>we can change the <code>flex-direction</code> property to column which aligns items from top to bottom.</li>
+<li>When it is set to column the property <code>justify-content</code> acts like <code>align-items</code> property and vice versa.</li>
+</ul>
+<h4 id="justify-content">justify-content:</h4>
+<p><code>justify-content</code> property to justify elements horizontally (main axis). It takes values:</p>
+<ul>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+<li>space-around</li>
+<li>space-between</li>
+<li>space-evenly</li>
+</ul>
+<h4 id="align-items">align-items:</h4>
+<p><code>align-items</code> property to align items to align items on vertically (cross axis)</p>
+<p>It takes values:</p>
+<ul>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+</ul>
+<h4 id="align-self">align-self:</h4>
+<p>The <code>align-self</code> property aligns the flex item along the cross axis,overiding the <code>align-items</code> value.</p>
+<p>It takes the values:</p>
+<ul>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+<li>baseline</li>
+<li>stretch</li>
+</ul>
+<p>side note: To make the container responsive vertically we set it's <code>height</code> to 100% as well as the html,body 's <code>height</code> to 100% as well.</p>
+<h4 id="align-content">align-content:</h4>
+<p>The <code>align-content</code> property modifies the behavior of the <code>flex-wrap</code> property. It is similar to <code>align-items</code>, but instead of aligning flex items, it aligns flex lines.</p>
+<p>It takes values:</p>
+<ul>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+<li>stretch</li>
+<li>space-between</li>
+<li>space-around</li>
+<li>space-evenly</li>
+</ul>
+<p>Note: There must be multiple lines of items for this property to have any effect!</p>
+<h4 id="flex-wrap">flex-wrap:</h4>
+<p>Specifies whether flex items are forced on a single line or can be wrapped on multiple lines.</p>
+<p>If the container is smaller than the element's width, then by default flexbox will not push the items to the next row. It will rather try to fit the items in the space available in the container by shrinking the item's width.</p>
+<p>We can change this behaviour with the <code>flex-wrap</code> property.
+It takes the values:</p>
+<ul>
+<li>nowrap (default)</li>
+<li>wrap</li>
+<li>wrap-reverse</li>
+</ul>
+<h4 id="flex-flow">flex-flow:</h4>
+<p>Shorthand property for <code>flex-direction</code> and <code>flex-wrap</code></p>
+<p>Usage: flex-direction flex-wrap</p>
+<h4 id="flex-property">flex property:</h4>
+<p>flex property:
+The <code>flex</code> property sets the flexible length on flexible items.</p>
+<p>The <code>flex</code> property is a shorthand property for:</p>
+<ul>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+<li>flex-basis</li>
+</ul>
+<pre><code class="language-css"><div><span class="hljs-selector-tag">flex</span>: 1;
+</div></code></pre>
+<p>is a shorthand for writing</p>
+<pre><code class="language-CSS"><div><span class="hljs-selector-tag">flex-grow</span><span class="hljs-selector-pseudo">:1</span>;
+<span class="hljs-selector-tag">flex-shrink</span><span class="hljs-selector-pseudo">:1</span>;
+<span class="hljs-selector-tag">flex-basis</span><span class="hljs-selector-pseudo">:0</span>;
+</div></code></pre>
+<p>The second and third parameters (flex-shrink and flex-basis) are optional.</p>
+<p>Another Example:</p>
+<pre><code class="language-CSS"><div><span class="hljs-selector-tag">flex</span>: 2 1 200<span class="hljs-selector-tag">px</span>;
+</div></code></pre>
+<p>is same as doing,</p>
+<pre><code class="language-CSS"><div><span class="hljs-selector-tag">flex-grow</span>: 2;
+<span class="hljs-selector-tag">flex-shrink</span><span class="hljs-selector-pseudo">:1</span>;
+<span class="hljs-selector-tag">flex-basis</span><span class="hljs-selector-pseudo">:200px</span>;
+</div></code></pre>
+<p>The <code>flex-grow</code> property specifies how much the item will grow relative to the rest of the flexible items inside the same container.</p>
+<p>The <code>flex-shrink</code> property determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there isn't enough space on the row.</p>
+<p>The <code>flex-basis</code> property specifies the initial length of a flexible item.</p>
+<h4 id="order-property">order property:</h4>
+<p>Specifies the order of the flex item</p>
+<p>Flex items are displayed in the same order as they appear in the HTML document by default. The <code>order</code> property can be used to change this ordering.</p>
+<p>default <code>order</code> value is 0. positive values move the element to the right and negative values move the element to the left.</p>
+<h4 id="media-queries">media queries</h4>
+<p><a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">https://css-tricks.com/snippets/css/media-queries-for-standard-devices/</a></p>
+
+    </body>
+    </html>
