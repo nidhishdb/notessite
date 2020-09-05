@@ -11,3 +11,5 @@
 [AskHN:How-to-come-up-with-profitable-side-project-ideas](How-to-come-up-with-profitable-side-project-ideas.html)
 
 [qr-codes-china](qr-codes-china.html)
+
+[The Enchiridion By Epictetus [txt]](The\ Enchiridion\ By\ Epictetus.txt)
