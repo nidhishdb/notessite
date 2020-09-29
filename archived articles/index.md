@@ -13,3 +13,5 @@
 [qr-codes-china](qr-codes-china.html)
 
 [The Enchiridion By Epictetus [txt]](The-Enchiridion-By-Epictetus.txt)
+
+[Lessons-from-ancient-Philosophers [pdf]](Lessons-from-ancient-philosphers.pdf)
