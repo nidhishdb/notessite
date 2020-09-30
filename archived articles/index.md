@@ -14,4 +14,6 @@
 
 [The Enchiridion By Epictetus [txt]](The-Enchiridion-By-Epictetus.txt)
 
-[Lessons-from-ancient-Philosophers [pdf]](Lessons-from-ancient-philosphers.pdf)
+[Lessons-from-ancient-Philosophers [PDF]](Lessons-from-ancient-philosphers.pdf)
+
+[handbook for life [PDF]](handbook-for-life.pdf)
