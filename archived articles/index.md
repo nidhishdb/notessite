@@ -17,3 +17,5 @@
 [Lessons-from-ancient-Philosophers [PDF]](Lessons-from-ancient-philosphers.pdf)
 
 [handbook for life [PDF]](handbook-for-life.pdf)
+
+[Stoicism a Masterclass in Emotion Regulation [PDF]](Stoicism-a-Masterclass-in-Emotion-Regulation.pdf)
