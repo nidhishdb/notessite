@@ -19,3 +19,5 @@
 [handbook for life [PDF]](handbook-for-life.pdf)
 
 [Stoicism a Masterclass in Emotion Regulation [PDF]](Stoicism-a-Masterclass-in-Emotion-Regulation.pdf)
+
+[Setting up your indoor space](setting-up-your-indoor-space.html)
