@@ -21,3 +21,5 @@
 [Stoicism a Masterclass in Emotion Regulation [PDF]](Stoicism-a-Masterclass-in-Emotion-Regulation.pdf)
 
 [Setting up your indoor space](setting-up-your-indoor-space.html)
+
+[The Enchiridion in Plain English](The-Enchiridion-in-Plain-English.html)
