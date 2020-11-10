@@ -23,3 +23,5 @@
 [Setting up your indoor space](setting-up-your-indoor-space.html)
 
 [The Enchiridion in Plain English](The-Enchiridion-in-Plain-English.html)
+
+ [Two-Amazon-Developers-Created-a-249-Billion-Amazon-Killer](Two-Amazon-Developers-Created-a-249-Billion-Amazon-Killer.pdf)
