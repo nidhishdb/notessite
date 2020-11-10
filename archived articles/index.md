@@ -24,4 +24,4 @@
 
 [The Enchiridion in Plain English](The-Enchiridion-in-Plain-English.html)
 
- [Two-Amazon-Developers-Created-a-249-Billion-Amazon-Killer](Two-Amazon-Developers-Created-a-249-Billion-Amazon-Killer.pdf)
+ [Two-Amazon-Developers-Created-a-249-Billion-Amazon-Killer [PDF]](Two-Amazon-Developers-Created-a-249-Billion-Amazon-Killer.pdf)
