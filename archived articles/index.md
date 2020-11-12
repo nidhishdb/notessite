@@ -24,4 +24,6 @@
 
 [The Enchiridion in Plain English](The-Enchiridion-in-Plain-English.html)
 
- [Two-Amazon-Developers-Created-a-249-Billion-Amazon-Killer [PDF]](Two-Amazon-Developers-Created-a-249-Billion-Amazon-Killer.pdf)
+[Two-Amazon-Developers-Created-a-249-Billion-Amazon-Killer [PDF]](Two-Amazon-Developers-Created-a-249-Billion-Amazon-Killer.pdf)
+
+[Elon Musk's 2 rules for learning faster [PDF]](Elon-Musks-2-Rules-For-Learning-Anything-Faster.pdf)
